@@ -1,0 +1,38 @@
+/* TABS */
+ul.tabnav{
+    margin: 0;
+    padding: 0;
+}
+    .tabnav li {
+        display: inline;
+        list-style: none;
+        padding-right: 5px;
+    }
+
+            .tabnav li a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #a40000;
+                font-weight: bold;
+                padding: 4px 6px;
+                outline: none;
+            }
+
+            .tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
+                background: #dedbd1;
+                color: #a40000;
+                font-size:120%;
+                text-decoration: none;
+            }
+		
+.tabdiv {
+    margin-top: 2px;
+    background: #fff;
+    border: 1px solid #dedbd1;
+    padding: 10px 10px;
+}
+    .tabdiv li{line-height: 2em;}
+    
+.ui-tabs-hide {display: none;}
+		
+

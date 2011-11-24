@@ -1,0 +1,80 @@
+/*html {	background: #1d1d1d;color: #fff; }
+body {
+	margin: 0; padding: 0;
+	font: 15px normal Verdana, Arial, Helvetica, sans-serif;
+	background: #1d1d1d; 
+}*/
+
+h1{
+    font: 4.6em normal Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0;
+}      
+h1 small{
+        font: 0.2em normal Verdana, Arial, Helvetica, sans-serif;
+        text-transform:uppercase;
+        letter-spacing: 1.3em;
+        display: block;
+        color: #ccc;
+}
+h1 a {
+   position:relative;
+   display:block;
+   width:300px;
+   height:102px; 
+   margin:0 auto;
+}
+h1 a span {
+   display:block;
+   position:absolute;
+   width:100%;
+   height:100%;
+   background:#ffffff url("/css/img/ewitis/ewitis-uzke300.jpg") no-repeat left top;
+   z-index:100; /* Places <span> on top of <a> text */  
+}
+
+        
+#header{
+  font: 10px normal Verdana, Arial, Helvetica, sans-serif;  
+}
+
+    
+
+   
+    
+ul#topnav {
+	margin: 10px auto 20px; 
+	padding: 0; 
+	list-style: none;	
+	font-size: 1.2em;
+	clear: both;	
+	width: 615px;
+}
+    ul#topnav li{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+            height:40px;            
+    }
+    ul#topnav a, ul#topnav span {
+            padding: 10px 20px;
+            float: left;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            clear: both;
+            height: 20px;
+            line-height: 20px;
+            background: #1d1d1d;
+            letter-spacing: 0.4em;
+    }
+    ul#topnav a {color: #7bc441; }
+    ul#topnav span {display: none;}
+    ul#topnav.v2 span{background: url(img/menu/a_bg.gif) repeat-x left top;}
+    ul#topnav.v2 a{
+            color: #555;
+            background: url(img/menu/a_bg.gif) repeat-x left bottom;
+    }

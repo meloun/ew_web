@@ -1,0 +1,38 @@
+/* reset */
+html, body, ul, ol, li{
+    margin: 0; padding: 0;
+}
+/* end of reset */
+
+html {	color: #fff; }
+body {		
+        font: 9pt Verdana, Arial, Helvetica, sans-serif;
+        color: #222;        
+        margin-top:1em;
+}
+li {line-height: 1.8em;}
+ol, ul{margin-left:2em;}
+li{ margin:0;}
+
+img, img a {border: none;}
+
+li a {color: #222; }
+a{color: #a40000;}
+a[href $='.pdf'] {
+   padding-right: 18px;
+   background: transparent url(img/icon_pdf.gif) no-repeat center right;
+}
+a[rel ~='external'] {
+	padding-right: 18px;
+	background: transparent url(img/icon_external.gif) no-repeat center right;        
+        font-size: 95%;
+}
+
+
+h1, h2, h3, h4{color: #a40000;}
+
+
+
+
+
+

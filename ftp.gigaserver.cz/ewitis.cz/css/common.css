@@ -1,0 +1,97 @@
+/* tooltip */
+a.tooltip{text-decoration: none; border-bottom:1px dashed #d6d6d6;}
+a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
+
+/* velikosti */
+.size90{font-size: 90%}
+.size95{font-size: 95%}
+.size120{font-size: 120%;}
+.size130{font-size: 130%;}
+.size140{font-size: 140%;}
+
+/* seznamy */
+
+table td {font-size:90%;}
+input.smallBtn{font-size:80%;}
+
+.cistic{clear:both;}
+ img.right{float:right;}
+ img.left{float:left;}
+
+#flash {
+	background: #fce94f;
+	border: solid 1px #edd400;
+	color: #2e3436;
+	width:400px;
+        /*float:right;*/
+	padding: 5px;
+}
+	#flash .close {
+		background: transparent url(img/flash/close-16.png) no-repeat;
+		cursor: pointer;
+		float: right;
+		margin-left: 10px;
+		width: 16px;
+		height: 16px;
+	}
+
+
+/* container se zaoblenymi rohy */
+.toggle_container {
+	margin: 0 auto 5px;
+	padding: 0;
+	border-top: 1px solid #d6d6d6;
+	background: #f0f0f0 url(img/blocks/toggle_block_stretch.gif) repeat-y left top;
+	overflow: hidden;
+	width: 500px;
+	clear: both;          
+}
+.toggle_container.w600{
+    width:600px;
+    background:  url(img/blocks/toggle_block_stretch_600.gif) repeat-y left top;
+}
+    .toggle_container .block {
+            padding: 10px 15px;
+            background: url(img/blocks/toggle_block_btm.gif) no-repeat left bottom;
+    }
+    .toggle_container.w600 .block {
+            padding: 10px 15px;
+            background: url(img/blocks/toggle_block_btm_600.gif) no-repeat left bottom;
+    }
+        .toggle_container .block p {
+                padding: 5px 0;
+                margin: 5px 0;
+        }
+    .toggle_container h2,
+    .toggle_container h3 {
+            font: 2em normal Georgia, "Times New Roman", Times, serif;
+            margin: 0 0 10px;
+            padding: 0 0 4px 0;
+            border-bottom: 1px dashed #ccc;
+    }
+    .toggle_container img {
+            float: left;
+            margin: 10px 35px 15px 0;
+            padding: 5px;
+            background: #ddd;
+            border: 1px solid #ccc;
+    }
+     .toggle_container img.right {float:right;margin: 10px 0px 15px 20px;}
+
+#demotip {
+	display:none;
+        font-size:90%;
+	background:transparent url(img/tooltip/white.png);
+	height:60px;
+	width:160px;
+	padding:25px;
+	color:#000;
+        text-align: left;
+}
+
+/* style the trigger elements */
+#demo img {
+	border:0;
+	cursor:pointer;
+	margin:0 8px;
+}

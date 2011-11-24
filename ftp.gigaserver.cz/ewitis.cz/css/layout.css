@@ -1,0 +1,25 @@
+#container{
+  width:680px;
+  margin-left:auto;
+  margin-right:auto;
+  border-left:solid 2px #9C5656 !important;
+  border-right:solid 2px #9C5656 !important;
+
+  /*border-top:solid 2px #9C5656;*/
+}
+
+#content{
+    padding:1em;    
+    text-align: justify;
+    line-height: 1.4em;    
+    color: #222;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+}
+
+#content, ul#topnav{
+
+
+}
+
+
