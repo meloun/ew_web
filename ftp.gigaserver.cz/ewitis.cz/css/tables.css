@@ -3,11 +3,10 @@ table.tablesorter tbody td.cena
     {text-align: center;}
 table.tablesorter thead tr th{text-align: center;}
 
-table.tablesorter tbody td{padding-left: 10px;}
+table.tablesorter tbody td{padding-left: 5px;padding-right: 5px;}
 table.tablesorter tbody td.name{font-weight: bold;color: #a40000;}
 
 
-table.tablesorter thead tr th.id{width:40px;}
+table.tablesorter thead tr th.id{width:30px;}
 table.tablesorter thead tr th.cena{width:60px;}
-#zavody table{width:500px;margin:0 auto;}
-tr.odd td{background: red;}
+tr.odd td{background: red; font-size: 100%;}

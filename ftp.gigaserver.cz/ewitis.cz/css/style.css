@@ -1,0 +1,227 @@
+/*  
+ * RESET, DEFAULT
+ */
+html, body, ul, ol, li{
+    margin: 0; padding: 0;
+}
+
+html {  color: #fff; }
+body {		
+        font: 9pt Verdana, Arial, Helvetica, sans-serif;
+        color: #222;        
+        margin-top:1em;
+}
+
+/*nadpisy*/
+h1, h2, h3, h4{color: #a40000;}
+
+/*seznamy*/
+ol, ul{margin-left:2em;}
+li {
+    line-height: 1.8em;
+    margin:0;
+}
+    li a {color: #222; }
+    
+/*obrazky*/
+img, img a {border: none;}
+
+/*odkazy*/
+a{color: #a40000;}
+a[href $='.pdf'] {
+   padding-right: 18px;
+   background: transparent url(img/icon_pdf.gif) no-repeat center right;
+}
+a[rel ~='external'] {
+	padding-right: 18px;
+	background: transparent url(img/icon_external.gif) no-repeat center right;        
+        font-size: 95%;
+}
+
+/*  
+ * LAYOUT
+ */
+ 
+ #container{
+  width:780px;
+  margin-left:auto;
+  margin-right:auto;
+  border-left:solid 2px #9C5656 !important;
+  border-right:solid 2px #9C5656 !important;
+}
+
+#content{
+    padding:1em;      
+    text-align: justify;
+    line-height: 1.4em;    
+    color: #222;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+}
+
+/*  
+ * HEADER
+ */
+/*logo*/
+#header h1{
+    font: 4.6em normal Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0;
+}      
+    #header h1 a {
+       position:relative;
+       display:block;
+       width:300px;
+       height:102px; 
+       margin:0 auto;
+    }
+        #header h1 a span {
+           display:block;
+           position:absolute;
+           width:100%;
+           height:100%;
+           background:#ffffff url("/css/img/ewitis/ewitis-uzke300.jpg") no-repeat left top;
+           z-index:100; /* Places <span> on top of <a> text */  
+        }       
+/*menu*/    
+ul#topnav {
+	margin: 10px auto 20px; 
+	padding: 0; 
+	list-style: none;	
+	font: 12px normal Verdana, Arial, Helvetica, sans-serif;  
+	clear: both;	
+	width: 620px;        
+}
+    ul#topnav li{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+            height:40px;            
+    }
+    ul#topnav a, ul#topnav span {
+            padding: 10px 20px;
+            float: left;
+            text-decoration: none;            
+            text-transform: uppercase;
+            clear: both;
+            height: 20px;
+            line-height: 20px;
+            background: #1d1d1d;
+            letter-spacing: 0.4em;
+    }
+    ul#topnav span{color: #fff;display: none;background: url(img/menu/a_bg.gif) repeat-x left top;}
+    ul#topnav a{color: #555;background: url(img/menu/a_bg.gif) repeat-x left bottom;}
+
+
+/*  
+ * COMMON
+ */
+/* velikosti */
+.size90{font-size: 90%}
+.size95{font-size: 95%}
+.size120{font-size: 120%;}
+.size130{font-size: 130%;}
+.size140{font-size: 140%;}
+.topmargin20{margin-top: 50px;}
+.cistic{clear:both;}
+blockquote {
+        font-size: 140%;
+	color: #a40000;
+	padding: 5px 0 5px 36px;
+	background: url(img/red_quotes.gif) no-repeat 5px 0px;	
+        margin-left:240px; 
+        font-style: italic;        
+        
+         /*
+        border:solid red 1px;
+        border-top: 0 dotted red;
+	border-bottom: 0 dotted;
+        border-bottom: 1px dashed #ccc;
+        border-top: 1px dashed #ccc;*/
+}
+ img.right{float:right;}
+ img.left{float:left;}
+ /* tooltip */
+a.tooltip{text-decoration: none; border-bottom:1px dashed #d6d6d6;}
+a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
+#demotip {
+	display:none;
+        font-size:90%;
+	background:transparent url(img/tooltip/white.png);
+	height:60px;
+	width:160px;
+	padding:25px;
+	color:#000;
+        text-align: left;
+}
+#demo img {
+	border:0;
+	cursor:pointer;
+	margin:0 8px;
+}
+
+#flash {
+	background: #fce94f;
+	border: solid 1px #edd400;
+	color: #2e3436;
+	width:400px;
+        /*float:right;*/
+	padding: 5px;
+}
+	#flash .close {
+		background: transparent url(img/flash/close-16.png) no-repeat;
+		cursor: pointer;
+		float: right;
+		margin-left: 10px;
+		width: 16px;
+		height: 16px;
+	}
+
+
+/* container se zaoblenymi rohy */
+.toggle_container {
+	margin: 0 auto 5px;
+	padding: 0;
+	border-top: 1px solid #d6d6d6;
+	background: #f0f0f0 url(img/blocks/toggle_block_stretch.gif) repeat-y left top;
+	overflow: hidden;
+	width: 500px;
+	clear: both;          
+}
+.toggle_container.w600{
+    width:600px;
+    background:  url(img/blocks/toggle_block_stretch_600.gif) repeat-y left top;
+}
+    .toggle_container .block {
+            padding: 10px 15px;
+            background: url(img/blocks/toggle_block_btm.gif) no-repeat left bottom;
+    }
+    .toggle_container.w600 .block {
+            padding: 10px 15px;
+            background: url(img/blocks/toggle_block_btm_600.gif) no-repeat left bottom;
+    }
+        .toggle_container .block p {
+                padding: 5px 0;
+                margin: 5px 0;
+        }
+    .toggle_container h2,
+    .toggle_container h3 {
+            font: 2em normal Georgia, "Times New Roman", Times, serif;
+            margin: 0 0 10px;
+            padding: 0 0 4px 0;
+            border-bottom: 1px dashed #ccc;
+    }
+    .toggle_container h3{font-size: 1.4em}
+    .toggle_container img {
+            float: left;
+            margin: 10px 35px 15px 0;
+            padding: 5px;
+            background: #ddd;
+            border: 1px solid #ccc;
+    }
+     .toggle_container img.right {float:right;margin: 10px 0px 15px 20px;}
+
+

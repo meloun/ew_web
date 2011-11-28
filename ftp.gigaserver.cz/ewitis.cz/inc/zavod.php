@@ -14,7 +14,7 @@
 
 <style type="text/css">
     #filter span{padding-left:2em;}
-    #tab_galerie{text-align: center;}
+    #tab_galerie{text-align: center;}    
 </style>
 
 

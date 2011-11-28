@@ -223,7 +223,7 @@ class Competition {
                             <form action="" method="post">
                                 <input type="hidden" name="uid" value="<?=$user['id']?>" />
                                 <input type="hidden" name="redir" value="?page=pictures&amp;gid=1" />
-                                <input type="input" name="description" value="<?=$user['description']?>" size="20" />
+                                <input type="input" name="description" value="<?=$user['description']?>" size="10" />
                                 <input type="submit" name="submit" value=">>" class="smallBtn" />
                             </form>
                         </td>

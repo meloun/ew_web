@@ -17,7 +17,7 @@
         session_start();
 	ob_start();
         
-	if (!isset($_GET['p'])) $_GET['p'] = 'ewitis';
+	if (!isset($_GET['p'])) $_GET['p'] = 'casomira';
 	if (!file_exists(WEB_PATH . strtolower($_GET['p']) . '.php'))
 		$_GET['page'] = '404';
 	include WEB_PATH . '/inc/' . strtolower($_GET['p']) . '.php';

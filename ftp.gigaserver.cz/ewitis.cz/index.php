@@ -46,12 +46,10 @@
     <meta name="author" content="Lubos Melichar" />    
     <title><?=$TEXT['title_prefix']?> Časomíra Ewitis | Závody,tréninky - horská kola, atletika, běžecké závody</title>           
 
-<link href="/css/header.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/tabs.css" rel="stylesheet" type="text/css" />
 
-<link href="/css/default.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/common.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/layout.css" media="screen" rel="stylesheet" type="text/css" />
+    
+<link href="/css/tabs.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" media="screen" rel="stylesheet" type="text/css" />
 
 <link href="/jquery/themes/blue/style.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/tables.css" rel="stylesheet" type="text/css" />
@@ -86,7 +84,7 @@
      <div id="header">    
          <h1><a href="/" title="Ewitis.cz"><span></span>Ewitis.cz</a></h1>
             <ul id="topnav" class="v2">            
-                <li <?=($_GET['p']=='ewitis') ? "id='current'": '';?>><a href="?p=ewitis">EWITIS</a></li>
+                <li <?=($_GET['p']=='casomira') ? "id='current'": '';?>><a href="?p=casomira">Časomíra</a></li>
                 <li <?=(($_GET['p']=='zavody')|(($_GET['p']=='registrace'))) ? "id='current'": '';?>><a href="?p=zavody">Závody</a></li>
                 <li <?=($_GET['p']=='reference') ? "id='current'": '';?>><a href="?p=reference">Reference</a></li>
                 <li <?=($_GET['p']=='ceník') ? "id='current'": '';?>><a href="?p=cenik">Ceník</a></li>

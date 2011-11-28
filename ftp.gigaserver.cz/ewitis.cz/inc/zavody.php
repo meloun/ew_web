@@ -2,6 +2,9 @@
     $subtitle = "Registrace";
     $competitions = Competition::GetAll();
 ?>
+<style type="text/css">    
+
+</style>
 <div id="zavody">
      <div class="toggle_container w600">
             <div class="block">

@@ -1,7 +1,4 @@
 <style type="text/css">
-    #ewitis h3{font-size:150%;margin:0;padding:0;margin-bottom: 0.3em;}
-    #ewitis img{margin:0em;float:none;}
-    #ewitis p {margin:0em;}
     .reference{margin-bottom:2em;}
         .img_box_left{float:left; width:120px;}
         .img_box_left img,
@@ -11,32 +8,30 @@
         .text_box_right{float:right;width:400px;}    
 </style>
 
-<div id="ewitiss">
-         <div class="toggle_container w600">
-		<div class="block">
-                        <h3>O co jde?</h3>
-                        <img src="gfx/stopky4_200.jpg" class="right"/>
-                        <p>
-                            Ewitis je profesionální časomíra ušitá "na míru" sportovcům a jejich potřebám.
-                        </p>
-                        <p>
-                            Ewitis je naše řešení, jak měřit vaše závodní klání nebo tréninkové dávky.
-                            Nabízíme vám bezdrátové elektronické měření času, které vnese jistotu, přehled a profesionalitu do vašeho závodu.
-                            Při trénincích Vám ukáže slabiny, dodá motivaci zlepšit se.
-                        </p>			
-                        <h3 class="cistic">Ewitis?</h3>
-                        <ul class="size120 center w300">
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Jsme schopni obsloužit až 12 optických závor. To znamená startovní, cílovou + 10 mezičasů."/>Optické závory na stativech</a>
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Shromažďuje informace z buněk, je vybavena klávesnicí a LCD displejem."/>Centrální jednotka</a>
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Napájení řešíme Li-Ion bateriemi, integrovanou nabíječka je samozřejmostí."/>Kompletně bezdrátové řešení</a>
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Naměřené časy se jednoduše přenesou do aplikace, kde s nimi můžete dále pracovat."/>Aplikace pro PC</a>
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Připojený LCD monitor zobrazuje aktuální mezičasy a podstatné údaje závodu."/>Okamžitá vizualizace na LCD monitoru</a>
-                            <li><a href="#" class="tooltip" onclick="return false;" title="Pokud si přejete, výsledky mohou být jedním kliknutím umístěny na náš web."/>Automatický umístění výsledků na web</a>
-                        </ul>
-                        <div class="cistic"></div>
-		</div>           
-	</div>
-    </div>
+<div id="ewitis"> 
+         <div class="toggle_container w600">            
+            <div class="block">
+                <h2>Časomíra Ewitis je..</h2>
+                <p>
+                    <img src="gfx/stopky4_200.jpg" class="left"/>
+                    ..profesionální zařízení "ušité na míru" sportovcům a jejich potřebám. Ewitis je Naše řešení, jak měřit Vaše závodní klání a tréninkové dávky. Nabízíme vám bezdrátové elektronické měření času, které vnese jistotu, přehled a profesionalitu do vašeho závodu. Při trénincích Vám ukáže slabiny a dodá motivaci zlepšit se.                    
+                </p>
+                <blockquote>Vy závodíte, my měříme..</blockquote>
+                <div class="cistic"></div>                               
+                <h3>Čipová a optická časomíra</h3>
+                <img src="css/img/stopwatch.jpg" class="right topmargin20"/>
+                
+                <p>
+                    Disponujeme <strong>čipovou <i>"závodní"</i> časomírou</strong> pro měření rozličných sportovních disciplín jako je cyklistika, horská kola, běžecké závody ale i motoristické sporty jako motorky, fichtly, automobilové závody a další. Tato časomíra se skládá z dvou nezávisle měřících antén, terminálu pro příjem RFID tagů a aplikace v PC, která zpracovává výsledky. 
+                </p>
+                <p>
+                    Naproti tomu <strong>optická <i>"tréninková"</i> časomíra</strong> se skládá typicky ze dvou optických bran - START a CÍL (+ případné mezičasy), které bezdrátově komunikují s terminálem. Terminál je vybaven LCD displejem a klávesnicí pro snadné ovládání a rychlé zobrazení časů. Vše zaštiťuje aplikace, která sbírá, archivuje a vyhodnocuje vaše výsledky. Tréninková časomíra se specializuje na disciplíny jako je atletika, tréninky hasičů, kondiční testy rozhodčích a několik dalších. U tohoto způsobu měření garantujeme vysokou spolehlivost a přesnost měření (0,01s). 
+                </p>
+                    
+            </div>
+         </div>
+
+</div>
 
     <h2> Stránky jsou v údržbě</h2>
     <div id="ewitis">

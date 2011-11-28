@@ -86,12 +86,15 @@
 
 ?>
 
-<style type="text/css">
-    #container{width:1200px;}
+<style type="text/css">   
+   
+    #container{width:1200px;}    
+    #admin_users table tbody td{padding:0em;padding-left: 5px;font-size:95%;}        
     .selected{font-weight: bold; font-size: 120%;}
     h3{margin-bottom:0;}
 </style>
 
+<div id="admin_users">
     <h2><?=$competition['name']?></h2>
     <h3>Přihlášen uživatel <?=$admin['name']?></h3>
     <a href="/exports/<?=Utils::Utf2ascii($competition['name']).".csv"?>"><img src="/gfx/excel.png" title="stáhnout CSV"/></a>
@@ -99,24 +102,26 @@
     <a href="<?=$ADRESS_THIS?>&csv=1">Excel(CP1250)</a> -
     <a href="<?=$ADRESS_THIS?>&csv=2">Aplikace(UTF-8)</a>  
 
- <div id="filter">
-    <form action="" method="get">
-    <input type="hidden" name="p" value="<?=$_GET['p'];?>" />
-    <input type="hidden" name="fp" value="<?$FILTER_PAID?>" />
-    <select name="fk" onChange="this.form.submit()" >
-	<option value="">- - -</option>
-	<?foreach($kategories as $kategory){?>
-	    <option value="<?=$kategory['id']?>" <?=($FILTER_KATEGORY == $kategory['id']) ? 'selected':''?>><?=$kategory['name']?></option>
-	<?}?>
-    </select>
-    </form>     
-    <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>" <?=($FILTER_PAID==NULL) ? 'class="selected"':''?>>všichni(<?=$users_count['pocet']?>)</a> |
-    <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>&fp=1" <?=($FILTER_PAID=='1') ? 'class="selected"':''?>>jen platící(<?=$users_count_paid['pocet']?>)</a> |
-    <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>&fp=0" <?=($FILTER_PAID=='0') ? 'class="selected"':''?>>jen neplatící(<?=$users_count_no_paid['pocet']?>)</a>
+     <div id="filter">
+        <form action="" method="get">
+        <input type="hidden" name="p" value="<?=$_GET['p'];?>" />
+        <input type="hidden" name="fp" value="<?$FILTER_PAID?>" />
+        <select name="fk" onChange="this.form.submit()" >
+            <option value="">- - -</option>
+            <?foreach($kategories as $kategory){?>
+                <option value="<?=$kategory['id']?>" <?=($FILTER_KATEGORY == $kategory['id']) ? 'selected':''?>><?=$kategory['name']?></option>
+            <?}?>
+        </select>
+        </form>     
+        <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>" <?=($FILTER_PAID==NULL) ? 'class="selected"':''?>>všichni(<?=$users_count['pocet']?>)</a> |
+        <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>&fp=1" <?=($FILTER_PAID=='1') ? 'class="selected"':''?>>jen platící(<?=$users_count_paid['pocet']?>)</a> |
+        <a href="<?=$ADRESS_EXCEPT_FILTER_GROUP?>&fp=0" <?=($FILTER_PAID=='0') ? 'class="selected"':''?>>jen neplatící(<?=$users_count_no_paid['pocet']?>)</a>
 
- </div>
+     </div>
 
-<?= Competition::Html_tableUsers($competition, $FILTER_KATEGORY, $FILTER_PAID, 1);?>
+    <?= Competition::Html_tableUsers($competition, $FILTER_KATEGORY, $FILTER_PAID, 1);?>
 
 <?}?>
+
+</div>
 
