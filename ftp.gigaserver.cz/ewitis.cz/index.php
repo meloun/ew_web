@@ -41,10 +41,10 @@
 <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs" />
-    <meta name="description" content="Rezervace ubytování. Ubytování v Apartmánu Ivona. Trpanj, poloostrov Pelješac, Chorvatsko." />
+    <meta name="description" content="Elektronická Sportovní Čipová Časomíra. Závody, Tréninky. Horská kole, MTB, atletika, běžecké závody." />    
     <meta name="keywords" content="Časomíra, závody, tréninky, horská kola, mtb, atletika, běžecké závody" />
     <meta name="author" content="Lubos Melichar" />    
-    <title><?=$TEXT['title_prefix']?> Časomíra Ewitis | Závody,tréninky - horská kola, atletika, běžecké závody</title>           
+    <title><?=$TEXT['title_prefix']?> Časomíra Ewitis | Závody,tréninky </title>           
 
 
     
@@ -71,10 +71,31 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("table").tablesorter({widthFixed: false, widgets: ['zebra']});
-                var $tabs = $('.tabnav').tabs(); // first tab selected
-                $tabs.tabs('select', <?=($_GET["tab"]) ? $_GET["tab"] : 0 ?>);
+		$("table").tablesorter({widthFixed: false, widgets: ['zebra']});                               
 	});
+</script>
+<script type="text/javascript">
+    
+$(document).ready(function() {
+
+	//Default Action        
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:eq(<?=$nr_tab?>)").addClass("active").show(); //Activate first tab
+	$(".tab_content:eq(<?=$nr_tab?>)").show(); //Show first tab content
+        	
+	
+	//On Click Event
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active content
+		return false;
+	});
+
+});
+
 </script>
 </head>
 
@@ -105,6 +126,15 @@
 
 
             <?=$content?>
+        </div>
+        <div id="footer">
+            <div class="toggle_container w600">            
+                <div class="block">
+                    <a href="http://ewitis.cz/">&copy; Časomíra Ewitis 2011</a>
+                    <div class="cistic"></div>                                                  
+
+                </div>
+            </div>
         </div>
 </div>
 

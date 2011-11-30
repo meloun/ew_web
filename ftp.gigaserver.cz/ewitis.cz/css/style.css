@@ -6,10 +6,11 @@ html, body, ul, ol, li{
 }
 
 html {  color: #fff; }
-body {		
-        font: 9pt Verdana, Arial, Helvetica, sans-serif;
+body {		        
+        font-family: Arial,Helvetica,sans-serif;
         color: #222;        
         margin-top:1em;
+        font-size:small;
 }
 
 /*nadpisy*/
@@ -31,11 +32,13 @@ a{color: #a40000;}
 a[href $='.pdf'] {
    padding-right: 18px;
    background: transparent url(img/icon_pdf.gif) no-repeat center right;
+   color: #a40000;
 }
 a[rel ~='external'] {
 	padding-right: 18px;
 	background: transparent url(img/icon_external.gif) no-repeat center right;        
         font-size: 95%;
+        color: #a40000;
 }
 
 /*  
@@ -110,7 +113,8 @@ ul#topnav {
             height: 20px;
             line-height: 20px;
             background: #1d1d1d;
-            letter-spacing: 0.4em;
+            /*letter-spacing: 0.4em;*/
+            letter-spacing: 4px;
     }
     ul#topnav span{color: #fff;display: none;background: url(img/menu/a_bg.gif) repeat-x left top;}
     ul#topnav a{color: #555;background: url(img/menu/a_bg.gif) repeat-x left bottom;}
@@ -127,21 +131,15 @@ ul#topnav {
 .size140{font-size: 140%;}
 .topmargin20{margin-top: 50px;}
 .cistic{clear:both;}
+.center{text-align:center;}
 blockquote {
-        font-size: 140%;
+        font-size: 130%;
 	color: #a40000;
-	padding: 5px 0 5px 36px;
-	background: url(img/red_quotes.gif) no-repeat 5px 0px;	
-        margin-left:240px; 
-        font-style: italic;        
-        
-         /*
-        border:solid red 1px;
-        border-top: 0 dotted red;
-	border-bottom: 0 dotted;
-        border-bottom: 1px dashed #ccc;
-        border-top: 1px dashed #ccc;*/
+	padding: 5px 0 5px 36px;	        
+        font-style: italic;   
+        margin-top:0;
 }
+blockquote span{font-size:280%; position:relative; top:10px;}
  img.right{float:right;}
  img.left{float:left;}
  /* tooltip */
@@ -183,7 +181,7 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
 
 /* container se zaoblenymi rohy */
 .toggle_container {
-	margin: 0 auto 5px;
+	margin: 0 auto 15px;
 	padding: 0;
 	border-top: 1px solid #d6d6d6;
 	background: #f0f0f0 url(img/blocks/toggle_block_stretch.gif) repeat-y left top;
@@ -191,6 +189,7 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
 	width: 500px;
 	clear: both;          
 }
+.toggle_container a{color: #a40000;}
 .toggle_container.w600{
     width:600px;
     background:  url(img/blocks/toggle_block_stretch_600.gif) repeat-y left top;
@@ -217,11 +216,12 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
     .toggle_container h3{font-size: 1.4em}
     .toggle_container img {
             float: left;
-            margin: 10px 35px 15px 0;
+            margin: 10px 20px 15px 0;
             padding: 5px;
             background: #ddd;
             border: 1px solid #ccc;
     }
      .toggle_container img.right {float:right;margin: 10px 0px 15px 20px;}
 
+#footer{text-align: center;font-size: 80%;}
 

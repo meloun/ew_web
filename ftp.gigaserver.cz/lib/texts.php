@@ -3,7 +3,7 @@
     switch($_GET['p']){
         case 'ewitis':
         case 'casomira':
-            $TEXT['title_prefix'] = "Čipová";
+            $TEXT['title_prefix'] = "Elektronická Sportovní Čipová";
             break;
         case 'zavody':
             $TEXT['title_prefix'] = "Závody - ";
@@ -18,6 +18,6 @@
             $TEXT['title_prefix'] = "Kontakt - ";
             break;
         default:
-            $TEXT['title_prefix'] = 'Čipová';
+            $TEXT['title_prefix'] = 'Elektronická Sportovní Čipová';
   }
 ?>
