@@ -25,7 +25,7 @@
 * html .btn:hover { border-color: #a00; }
 
 /*---------- centered button ----------*/
-.btnC { display: block; position: relative; background: #a40000; padding: 5px; width: 120px; margin: 0px auto; color: #fff; text-decoration: none; cursor: pointer; text-align: center; }
+.btnC { display: block; position: relative; background: #a40000; padding: 5px; width: 120px; margin: 0px auto; color: #fff !important; text-decoration: none; cursor: pointer; text-align: center; }
 .btnC * { font-style: normal; background-image: url('img/btn2.png'); background-repeat: no-repeat; display: block; position: relative; }
 .btnC i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
 .btnC span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }

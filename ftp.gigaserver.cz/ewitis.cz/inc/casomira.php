@@ -79,32 +79,33 @@
                                 </ul>                                    
                             </div>
                             <div class="img_box_right">
-                                <img src="/gfx/wireless_95.jpg" />
+                                <img src="/gfx/rfid-logo3_110.jpg" />
                             </div>
                             <div class="cistic"></div>
                         </div>
                         <div class="reference">                            
                             <div class="img_box_left">
-                                <img src="/gfx/cdbox.png" />
+                                <img src="/gfx/cdbox_110.jpg" />
                             </div>
                             <div class="text_box_right">
-                                <h3>Aplikace pro PC <small><a href="http://www.jawa50zavody.wz.cz/tremosna.htm" rel="external" target="_blank">www</a></small></h3>
-                                <ul>
-                                <li>import startovní listiny z naší online registrace, z excelu,.. </li>                                    
-                                <li>neustálý prehled o závode</li>
-                                <li>tvorba prubežných i konecných výsledku</li>                                                
-                                </ul>
+                                <h3>Aplikace pro PC</h3>
+                                <p>
+                                Podstatnou součástí celého systému je naše aplikace pro PC. Časy dobíhajících závodníků 
+                                se průběžně přenášejí do počítače, kde s nimi můžeme dále pracovat, podle 
+                                importované listiny se k časům automatickz přiřadí jména a další údaje - vše rychle dohledatelné a 
+                                upravitelné. Tisk průběžný i konečných výsledků je potom záležitost několika kliknutí. 
+                                </p>
                             </div>
                             <div class="cistic"></div>
                         </div>
                         <div class="reference">
                             <div class="text_box_left">
                                 <h3>Prezentace výsledků</h3>
-                                <ul>
-                                <li>LCD Monitor - pro zobrazení aktuálních mezičasů a podstatných údajů závodu  </li>                                    
-                                <li>Tisk - konecné, prípadne i prubežné výsledku</li>                                    
-                                <li>Web - oficiální výsledky k volnému stažení <a href="">príklad</a></li>                                  
-                                </ul>                                    
+                                <p>
+                                Zobrazení průběžných výsledků a podstatných údajů během závodu probíhá na <b>velkém LCD Monitoru.</b>
+                                Finální výsledky jsme schopni <b>vytisknout</b> během několi minut po skončení závodu,
+                                tentýž den jsou přístupné <b>na našem webu</b> a odeslány na <b>váš email.</b> 
+                                </p>
                             </div>
                             <div class="img_box_right">
                                 <img src="/gfx/man_finish_line.jpg" />
@@ -141,7 +142,7 @@
                                 tisk – vše je záležitostí několika minut a zvládne je počítačový začátečník.</p>
                             </div>
                             <div class="img_box_right">
-                                <img src="/gfx/cdbox.png" />
+                                <img src="/gfx/cdbox_110.jpg" />
                             </div>
                             <div class="cistic"></div>
                         </div>                    
