@@ -60,23 +60,19 @@
                             </div>
                             <div class="text_box_right">
                                 <h3>Online registrace</h3>
-                                <ul>                                    
-                                <li>snadná a rychlá registrace pro každého závodníka <a href="http://ewitis.cz/?p=zavod&cid=1&tab=2">testovací závod</a></li>                                    
-                                <li>ruzné závody, kategorie a podmínky registrace</li>                                    
-                                <li>systém potvrzování plateb (pro poradatele)</li>                                    
-                                <li>online prehled prihlášených a již platícíh závodníku</li>
-                                </ul>
+                                Registrace na našem webu nabízí snadnou a rychlou registraci pro každého závodníka, 
+                                pro pořadatele potom rychlý přehled o přihlášených závodnících a pohodlný systém potvrzovaní plateb.
+                                Registrace je navržena tak, že jsme připraveni na různé závody, kategorie a podmínky registrace.                                
                             </div>
                             <div class="cistic"></div>
                         </div>
                         <div class="reference">
                             <div class="text_box_left">
                                 <h3>Čipová casomíra</h3>
-                                <ul>                                    
-                                <li></li>
-                                <li></li>
-                                <li></a></li>                                    
-                                </ul>                                    
+                                <p>
+                                Naše závodní časomíra se skládá z nosné konstrukce a dvou nezávislých antén, 
+                                které snímají RFID tagy projíždějících závodníků.
+                                </p>                                
                             </div>
                             <div class="img_box_right">
                                 <img src="/gfx/rfid-logo3_110.jpg" />

@@ -12,11 +12,11 @@
 	
     define('DB_SERVER', 'KAPUSTA');
     if(DB_SERVER=='KAPUSTA'){
-        $db_name = 'ewitis_cz_registrace';
+        $db_name = 'casomira-ewitis_cz_1';
         define('DB_HOST', 'localhost');
         define('DB_NAME', $db_name);
-        define('DB_USR', 'ewitis_cz01');
-        define('DB_PWD', 'rendicka');
+        define('DB_USR', 'casomira-ewit_cz');
+        define('DB_PWD', 'fR0Lsqdl2A');
 	
         //PATHs 
         define('LIB_PATH',  $_SERVER['DOCUMENT_ROOT']. '/../lib');
