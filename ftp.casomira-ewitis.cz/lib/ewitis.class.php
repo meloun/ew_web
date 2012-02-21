@@ -65,8 +65,8 @@ class Ewitis {
 
             ".strip_tags(Ewitis::getPayString($user, $competition))."            
 
-	    http://www.ewitis.cz
-	    info@ewitis.cz
+	    http://www.casomira-ewitis.cz
+	    info@casomira-ewitis.cz
 	";
     }
     public static function getRegConfirmString($user, $competition){
@@ -76,8 +76,8 @@ class Ewitis {
 
             ".strip_tags(Ewitis::getUserString($user, $competition))."            
 
-	    http://www.ewitis.cz
-	    info@ewitis.cz
+	    http://www.casomira-ewitis.cz
+	    info@casomira-ewitis.cz
 	";
     }
     public static function getRegCancelString($user, $competition){
@@ -89,8 +89,8 @@ class Ewitis {
 
             ".strip_tags(Ewitis::getUserString($user, $competition))."            
 
-	    http://www.ewitis.cz
-	    info@ewitis.cz
+	    http://www.casomira-ewitis.cz
+	    info@casomira-ewitis.cz
 	";
     }
     public static function getRegDeleteString($user, $competition){
@@ -103,8 +103,8 @@ class Ewitis {
             ".strip_tags(Ewitis::getUserString($user, $competition))."
                 
 
-	    http://www.ewitis.cz
-	    info@ewitis.cz
+	    http://www.casomira-ewitis.cz
+	    info@casomira-ewitis.cz
 	";
     }
 }

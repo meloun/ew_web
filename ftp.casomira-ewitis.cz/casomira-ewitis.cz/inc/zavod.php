@@ -1,12 +1,23 @@
 <?php
-    $competition = Competition::Get($_GET['cid']);
-    //var_dump($competition);
-    $kategories = Kategory::GetParCompetitionId($_GET['cid']);
-    //var_dump($kategories);
-    $FILTER_KATEGORY = $_GET["fk"];
 
-    $users_count_paid = User::GetCount($competition['id'], $FILTER_KATEGORY, 1);
-    $users_count_nopaid = User::GetCount($competition['id'], $FILTER_KATEGORY, $paid_filtr=0);
+    $competitions = Competition::GetAll();
+    
+    //z url najdu zavod
+    foreach($competitions as $competition){        
+        if(Utils::friendly_url($competition['name']) == $_GET["n"])
+                break;
+    }
+           
+    $categories = Kategory::GetParCompetitionId($competition['id']);
+    //z url najdu kategorii   
+    foreach($categories as $category){        
+        if(Utils::friendly_url($category['name']) == $_GET["fk"])
+                break;
+        $category['id'] = NULL;
+    }    
+       
+    $users_count_paid = User::GetCount($competition['id'], $category['id'], 1);
+    $users_count_nopaid = User::GetCount($competition['id'], $category['id'], $paid_filtr=0);
        
     /* $nr_tab je pouzita v javasriptu pro vybrani zalozky */
     $nr_tab = 0;
@@ -38,9 +49,8 @@
 <style type="text/css">
     #filter span{padding-left:2em;}
     #tab_galerie{text-align: center;}    
-    ul.tabs li{font-size: 80%;}
+    ul.tabs li{font-size: 80%;}    
 </style>
-
 
 <?=($confirm != '') ? "<h3 class=\"confirm\">$confirm</h3>" : '';?>
 <?=($report != '') ? "<h3 class=\"report\">$report</h3>" : '';?>
@@ -48,10 +58,10 @@
     <div id="zavod">            
         <div class="toggle_container w600">
             <div class="block">
-                <h2><?=$competition['name']?></h2>
+                <h2><?=$competition['name']?></h2>                
                 <ul class="tabs">
                       <li><a href="#ozavode">O závodě</a></li>
-                      <? if($kategories){?>                                
+                      <? if($categories){?>                                
                       <li><a href="#kategorie">Kategorie</a></li>                                                                           
                       <li><a href="#registrace">Registrace</a></li>                                        
                       <li><a href="#zavodnici">Závodníci</a></li>
@@ -76,7 +86,7 @@
                             <?}?>
                             <?=common_processTexy($competition['desc'])?></div>
                     </div>
-                    <? if($kategories){?> 
+                    <? if($categories){?> 
                     <div id="kategorie" class="tab_content">                                   
                         Závod je rozdělen do následujících kategorií:
                         <?=Competition::Html_tableKategories($competition['id']);?>
@@ -86,12 +96,12 @@
                     <div id="registrace" class="tab_content">        
                         <?=common_processTexy($competition['desc_reg'])?>
                         
-                        <big class="size150"><a href="?p=registrace&cid=<?=$competition['id']?>" class="btnC">Registrovat  &raquo;</a></big>
+                        <big class="size150"><a href="/registrace/<?=Utils::friendly_url($competition['name'])?>" class="btnC">Registrovat  &raquo;</a></big>
                         <div class="cistic"></div>                                
                     </div>
                                                  
                     <div id="zavodnici" class="tab_content">  
-                        <h3><small>Seznam plně registrovaných závodníků</small></h3>
+                        <h3>Seznam plně registrovaných závodníků</h3>
                         <div class="size90">
                         Plná registrace sestává ze dvou kroku
                         <ol>
@@ -102,40 +112,40 @@
                         <br />
                         
                          <div id="filter">
-                            <form action="" method="get">
+                            <form action="/redirect.php" method="get">
                             <input type="hidden" name="p" value="<?=$_GET['p'];?>" />
-                            <input type="hidden" name="cid" value="<?=$_GET['cid'];?>" />                                   
-                            <input type="hidden" name="tab" value="3" />
+                            <input type="hidden" name="n" value="<?=$_GET['n'];?>" />                                   
+                            <input type="hidden" name="t" value="zavodnici" />
                             
                             <label>Kategorie:</label>
                             <select name="fk" onChange="this.form.submit()" class="size90">
                                 <option value="">- - -</option>
 
-                                <?foreach($kategories as $kategory){?>
-                                    <option value="<?=$kategory['id']?>" <?=($FILTER_KATEGORY == $kategory['id']) ? 'selected':''?>><?=$kategory['name']?></option>
+                                <?foreach($categories as $aux_category){?>
+                                    <option value="<?=Utils::friendly_url($aux_category['name'])?>" <?=($_GET["fk"] == Utils::friendly_url($aux_category['name'])) ? 'selected':''?>><?=$aux_category['name']?></option>
                                 <?}?>
                             </select>
                             <span> Počet závodníku: <?=$users_count_paid['pocet']?></span>
                             </form>                                    
                          </div>
                         <?                                 
-                         Competition::Html_tableUsers($competition, $FILTER_KATEGORY, 1);
+                         Competition::Html_tableUsers($competition, $category['id'], 1);
                          ?>
                         
-                        <h3><small>Seznam závodníku s nepotvrzenou registrací</small></h3>
+                        <h3>Seznam závodníku s nepotvrzenou registrací</h3>
                         
                         <div id="filter2">
-                            <form action="" method="get">
+                            <form action="/redirect.php" method="get">
                             <input type="hidden" name="p" value="<?=$_GET['p'];?>" />
-                            <input type="hidden" name="cid" value="<?=$_GET['cid'];?>" />
-                            <input type="hidden" name="tab" value="3" />
+                            <input type="hidden" name="n" value="<?=$_GET['n'];?>" />
+                            <input type="hidden" name="t" value="zavodnici" />
 
                             <label>Kategorie:</label>
                             <select name="fk" onChange="this.form.submit()" class="size90">
                                 <option value="">- - -</option>
 
-                                <?foreach($kategories as $kategory){?>
-                                    <option value="<?=$kategory['id']?>" <?=($FILTER_KATEGORY == $kategory['id']) ? 'selected':''?>><?=$kategory['name']?></option>
+                                <?foreach($categories as $aux_category){?>
+                                    <option value="<?=Utils::friendly_url($aux_category['name'])?>" <?=($_GET["fk"] == Utils::friendly_url($aux_category['name'])) ? 'selected':''?>><?=$aux_category['name']?></option>
                                 <?}?>
                             </select>
                             <span> Počet závodníku: <?=$users_count_nopaid['pocet']?></span>
@@ -143,7 +153,7 @@
                         </div>
                         
                         <?
-                         Competition::Html_tableUsers($competition, $FILTER_KATEGORY, 0);
+                         Competition::Html_tableUsers($competition, $category['id'], 0);
                         ?>
                     </div>
                     <?}?>

@@ -101,7 +101,7 @@
             
             <?if($competition['user_field_1_name'] != NULL){?>
                 <p>
-                    <label><?=$competition['user_field_1_duty'] ? '<span class="povinne">*</span>' : ''?> <?=$competition['user_field_1_name']?> </label>
+                    <label><?=$competition['user_field_1_duty'] ? '<span class="povinne">*</span>' : ''?><?=$competition['user_field_1_name']?> </label>
                     <input type="text" size="40" name="user_field_1" value="<?=$_POST['user_field_1']?>">
                 </p>
             <?}?>
@@ -109,7 +109,7 @@
             
             <?if($competition['user_field_2_name'] != NULL){?>
                 <p>
-                    <label><?=$competition['user_field_2_duty'] ? '<span class="povinne">*</span>' : ''?> <?=$competition['user_field_2_name']?> </label>
+                    <label><?=$competition['user_field_2_duty'] ? '<span class="povinne">*</span>' : ''?><?=$competition['user_field_2_name']?> </label>
                     <input type="text" size="40" name="user_field_2" value="<?=$_POST['user_field_2']?>">
                 </p>
             <?}?>
@@ -117,7 +117,7 @@
 
             <?if($competition['user_field_3_name'] != NULL){?>
             <p>
-                <label><?=$competition['user_field_3_duty'] ? '<span class="povinne">*</span>' : ''?> <?=$competition['user_field_3_name']?> </label>
+                <label><?=$competition['user_field_3_duty'] ? '<span class="povinne">*</span>' : ''?><?=$competition['user_field_3_name']?> </label>
                 <input type="text" size="40" name="user_field_3" value="<?=$_POST['user_field_3']?>">
             </p>
             <?}?>
@@ -128,7 +128,7 @@
             </p>
 
 
-            <input type="submit" name="submit_step1" class="size150"  value="<?=SUBMIT_STEP1?>">
+            <input type="submit" name="submit_step1" class="size150 submit"  value="<?=SUBMIT_STEP1?>">
         </form>
 
         <br />

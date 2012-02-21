@@ -10,6 +10,16 @@ class Email {
 	$domain = '[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])'; // jedna komponenta domény
 	return eregi("^$atom+(\\.$atom+)*@($domain?\\.)+$domain\$", $email);
     }
+    public static function isValidEmail($email){
+      $pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i";
+
+      if (preg_match($pattern, $email)){
+         return true;
+      }
+      else {
+         return false;
+      }   
+   }
     public static function encode_header($string) {
       return  '=?UTF-8?B?' . base64_encode($string) . '?=';
     }

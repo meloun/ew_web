@@ -52,6 +52,22 @@ class Utils {
 		$out = eregi_replace($divider . '+', $divider, $out);
 		return $out;
 	}
+
+        /** Vytvoření přátelského URL
+        * @param string řetězec v kódování UTF-8, ze kterého se má vytvořit URL
+        * @return string řetězec obsahující pouze čísla, znaky bez diakritiky, podtržítko a pomlčku
+        * @copyright Jakub Vrána, http://php.vrana.cz/
+        */
+        function friendly_url($nadpis) {
+            setlocale(LC_CTYPE, "cs_CZ.utf-8"); 
+            $url = $nadpis;
+            $url = preg_replace('~[^\\pL0-9_]+~u', '-', $url);
+            $url = trim($url, "-");
+            $url = iconv("utf-8", "us-ascii//TRANSLIT", $url);
+            $url = strtolower($url);
+            $url = preg_replace('~[^-a-z0-9_]+~', '', $url);
+            return $url;
+        }
 	
 	public static function Utf2ascii($string) {
 		$trans = array (

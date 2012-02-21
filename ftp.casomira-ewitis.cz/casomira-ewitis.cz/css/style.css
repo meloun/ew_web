@@ -124,11 +124,13 @@ ul#topnav {
  * COMMON
  */
 /* velikosti */
+.size80{font-size: 80%}
 .size90{font-size: 90%}
 .size95{font-size: 95%}
 .size120{font-size: 120%;}
 .size130{font-size: 130%;}
 .size140{font-size: 140%;}
+.size150{font-size: 140%;}
 .topmargin20{margin-top: 50px;}
 .cistic{clear:both;}
 .center{text-align:center;}
@@ -139,7 +141,7 @@ blockquote {
         font-style: italic;   
         margin-top:0;
 }
-blockquote span{font-size:280%; position:relative; top:10px;}
+blockquote span{font-size:220%; position:relative; top:2px;}
  img.right{float:right;}
  img.left{float:left;}
  /* tooltip */
@@ -165,18 +167,20 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
 	background: #fce94f;
 	border: solid 1px #edd400;
 	color: #2e3436;
-	width:400px;
+	width:400px;        
+        margin-left: 90px;
+        margin-bottom: 10px;
         /*float:right;*/
 	padding: 5px;
 }
-	#flash .close {
+	/*#flash .close {
 		background: transparent url(img/flash/close-16.png) no-repeat;
 		cursor: pointer;
 		float: right;
 		margin-left: 10px;
 		width: 16px;
 		height: 16px;
-	}
+	}*/
 
 
 /* container se zaoblenymi rohy */

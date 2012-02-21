@@ -2,7 +2,15 @@
 define("SUBMIT_STEP1", "Pokračovat &raquo;");
 define("SUBMIT_STEP2", "Registrovat");
 
-$competition = Competition::Get($_GET['cid']);
+
+
+//z url najdu zavod
+$competitions = Competition::GetAll();
+foreach($competitions as $competition){        
+    if(Utils::friendly_url($competition['name']) == $_GET["n"])
+            break;
+}   
+
 
 $step1_check_ok = 0;
 $step2_check_ok = 0;
@@ -34,7 +42,7 @@ if (isset ($_SESSION['app']['user'])){
 elseif ($_POST){
     if(($_POST['first_name']=='') || ($_POST['last_name']==''))
 	$report = "CHYBA: Nevyplněno jméno nebo příjmení!";
-    elseif(Email::check_email($_POST['email']) == false)
+    elseif(Email::isValidEmail($_POST['email']) == false)
 	$report = "CHYBA: Neplatný email!";
     elseif($_POST['sex']=='')
 	$report = "CHYBA: Nevybráno pohlaví!";
@@ -79,6 +87,7 @@ elseif ($_POST){
 	else{
                         
             //pridani uzivatele
+            $_POST['cid'] =  $competition['id'];
             User::Add($_POST);
 
             //zkopirovani postu do session
@@ -87,8 +96,8 @@ elseif ($_POST){
             //emaily
             $kategory = Kategory::Get($_POST['kategory_id']);
 	    $message = strip_tags(Ewitis::getRegRequestString($_POST, $competition, $kategory));
-	    Email::Send($_POST['email'], $competition['name']." - Registrace - {$_POST['first_name']} {$_POST['last_name']}", $message,"info@ewitis.cz", "časomíra Ewitis");
-	    Email::Send("registrace@ewitis.cz", "{$competition['name']} - Registrace - {$_POST['first_name']} {$_POST['last_name']}",$message,"bot@ewitis.cz", "časomíra Ewitis");            
+	    Email::Send($_POST['email'], $competition['name']." - Registrace - {$_POST['first_name']} {$_POST['last_name']}", $message,"info@casomira-ewitis.cz", "časomíra Ewitis");
+	    Email::Send("registrace@casomira-ewitis.cz", "{$competition['name']} - Registrace - {$_POST['first_name']} {$_POST['last_name']}",$message,"bot@ewitis.cz", "časomíra Ewitis");            
         }
     }
 
@@ -97,11 +106,18 @@ elseif ($_POST){
 }
 ?>
 
- <?
-/* var_dump($_POST);
- var_dump($step1_check_ok);
- var_dump($step2_check_ok);*/
-?>
+<style type="text/css">    
+
+    h2{font-size: 80%;}
+    form label{width:100px;display:block;float:left;}
+    form{text-align:  left;}
+    label span{font-size:85%;}
+    label span.povinne{font-size:100%; color:red;}
+    input.submit{margin:10px auto 0 auto; width: 150px;display:block;}
+    
+
+</style>
+
 
  <? if (isset($confirm)) { ?>
     <div id="flash" class="hidden">

@@ -124,7 +124,7 @@ class User {
 	    $email_esc = Db::EscString($array['email']);
 	    $birthday_esc = Db::EscInteger($array['birthday']);
 	    $sex_esc = Db::EscInteger($array['sex']);
-	    $competition_id_esc = Db::EscInteger($_GET['cid']);
+	    $competition_id_esc = Db::EscInteger($array['cid']);
 	    $kategory_id_esc = Db::EscInteger($array['kategory_id']);
 
             $user_field_1_esc = Db::EscString($array['user_field_1']);
@@ -148,7 +148,7 @@ class User {
 		    VALUES
 		    ({$id_esc}, {$competition_id_esc}, {$kategory_id_esc}, {$first_name_esc}, {$last_name_esc}, {$email_esc}, {$birthday_esc}, {$sex_esc}, {$user_field_1_esc}, {$user_field_2_esc}, {$user_field_3_esc}, {$symbol_esc})
 	    ";
-
+            var_dump($query);
 	    Db::Query($query, LINK);
 
 	    //}

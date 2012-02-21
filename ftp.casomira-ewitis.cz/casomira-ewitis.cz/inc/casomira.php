@@ -26,13 +26,13 @@
             <div class="block">
                 <h2>Elektronická Sportovní Časomíra Ewitis</h2>
                 <p>
-                    <img src="gfx/stopky4_200.jpg" alt="Stopky časomíry" class="left"/>
+                    <img src="/gfx/stopky4_200.jpg" alt="Stopky časomíry" class="left"/>
                     .. je profesionální zařízení "ušité na míru" sportovcům a jejich potřebám. Ewitis je Naše řešení, jak měřit Vaše závodní klání a tréninkové dávky. Nabízíme vám bezdrátové elektronické měření času, které vnese jistotu, přehled a profesionalitu do vašeho závodu. Při trénincích Vám ukáže slabiny a dodá motivaci zlepšit se.
                 </p>
-                <blockquote><span>”</span>&nbsp; Vy závodíte, my měříme..</blockquote>
+                <blockquote><span>&bdquo;</span>&nbsp; Vy závodíte, my měříme..<span>&ldquo;</span></blockquote>
                 <div class="cistic"></div>                               
                 <h3>Čipová a optická časomíra</h3>
-                <img src="gfx/bunka2_200.jpg" alt="Buňka tréninkové časomíry" class="right topmargin20"/>
+                <img src="/gfx/bunka2_200.jpg" alt="Buňka tréninkové časomíry" class="right topmargin20"/>
                 
                 <p>
                     Disponujeme <strong>čipovou <i>"závodní"</i> časomírou</strong> pro měření rozličných sportovních disciplín jako je cyklistika, horská kola, běžecké závody ale i motoristické sporty jako motorky, fichtly, automobilové závody a další. Tato časomíra se skládá z dvou nezávisle měřících antén, terminálu pro příjem RFID tagů a aplikace v PC, která zpracovává výsledky. 
@@ -88,8 +88,8 @@
                                 <p>
                                 Podstatnou součástí celého systému je naše aplikace pro PC. Časy dobíhajících závodníků 
                                 se průběžně přenášejí do počítače, kde s nimi můžeme dále pracovat, podle 
-                                importované listiny se k časům automatickz přiřadí jména a další údaje - vše rychle dohledatelné a 
-                                upravitelné. Tisk průběžný i konečných výsledků je potom záležitost několika kliknutí. 
+                                importované listiny se k časům automaticky přiřadí jména a další údaje - vše rychle dohledatelné a 
+                                upravitelné. Tisk průběžných i konečných výsledků je potom záležitost několika kliknutí. 
                                 </p>
                             </div>
                             <div class="cistic"></div>
@@ -123,7 +123,7 @@
                                 <li>Centrální jednotka s klávesnicí a LCD displejem</li>                            
                                 <li>Kompletně bezdrátové spolehlivé řešení(na přání drátová verze)</li>
                                 <li>Napájené Li-Ion bateriemi, integrovaná nabíječka</li>
-                                <li>více informací v našem <b><a href="/files/Ewitis_letak.pdf">letáku</a></b></li>
+                                <li>více informací v našem <b><a href="/files/casomira_treninkova_letak.pdf">letáku</a></b></li>
                                 </ul>
                             </div>
                             <div class="cistic"></div>
@@ -151,7 +151,7 @@
             <div class="block">
                <h2>Ke Stažení</h2>
                <ul>
-                   <li>technické informace k <a href="/files/Ewitis_letak.pdf">optické <i>"tréninkové"</i> Časomíře</a></li>               
+                   <li>technické informace k <a href="/files/casomira_treninkova_letak.pdf">optické <i>"tréninkové"</i> Časomíře</a></li>               
                    <li>technické informace k <a href="/files/Ewitis_technicke_info_cipova.pdf">čipové <i>"závodní"</i> Časomíře</a> (doplnit)</li>
                    <li>tréninková aplikace <a href="/files/Ewitis_aplikace_trenink_v1.3.zip">verze 1.3</a> (doplnit)</li>               
                </ul>

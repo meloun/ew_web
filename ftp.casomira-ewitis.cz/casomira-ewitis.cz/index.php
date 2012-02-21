@@ -41,7 +41,7 @@
 <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta http-equiv="Content-Language" content="cs" />
-    <meta name="description" content="Elektronická Sportovní Čipová Časomíra. Závody, Tréninky. Horská kole, MTB, atletika, běžecké závody." />    
+    <meta name="description" content="Čipová a optická časomíra - Měření sportovních událostí - Závody, Tréninky - horská kola, cyklistika, atletika, běžecké závody." />    
     <meta name="keywords" content="Časomíra, závody, tréninky, horská kola, mtb, atletika, běžecké závody" />
     <meta name="author" content="Lubos Melichar" />    
     <title><?=$TEXT['title_prefix']?> Časomíra Ewitis | Závody,tréninky </title>           
@@ -105,18 +105,17 @@ $(document).ready(function() {
      <div id="header">    
          <h1><a href="/" title="Ewitis.cz"><span></span>Ewitis.cz</a></h1>
             <ul id="topnav" class="v2">            
-                <li <?=($_GET['p']=='casomira') ? "id='current'": '';?>><a href="?p=casomira">Časomíra</a></li>
-                <li <?=(($_GET['p']=='zavody')|(($_GET['p']=='registrace'))) ? "id='current'": '';?>><a href="?p=zavody">Závody</a></li>
-                <li <?=($_GET['p']=='reference') ? "id='current'": '';?>><a href="?p=reference">Reference</a></li>
-                <li <?=($_GET['p']=='ceník') ? "id='current'": '';?>><a href="?p=cenik">Ceník</a></li>
-                <li <?=($_GET['p']=='kontakt') ? "id='current'": '';?>><a href="?p=kontakt">Kontakt</a></li>
+                <li <?=($_GET['p']=='casomira') ? "id='current'": '';?>><a href="/casomira">Časomíra</a></li>
+                <li <?=(($_GET['p']=='zavody')|(($_GET['p']=='registrace'))) ? "id='current'": '';?>><a href="/zavody">Závody</a></li>
+                <li <?=($_GET['p']=='reference') ? "id='current'": '';?>><a href="/reference">Reference</a></li>
+                <li <?=($_GET['p']=='cenik') ? "id='current'": '';?>><a href="/cenik">Ceník</a></li>
+                <li <?=($_GET['p']=='kontakt') ? "id='current'": '';?>><a href="/kontakt">Kontakt</a></li>
             </ul>
      </div>
 
 	<div style="clear: both;"></div>
-        <div id="content">           
-
-
+        <div id="content">                   
+            
         <? if (isset($flash)) { ?>
                 <div id="flash" class="hidden">
                     <div class="close" onclick="_close('flash');"></div>
@@ -130,7 +129,7 @@ $(document).ready(function() {
         <div id="footer">
             <div class="toggle_container w600">            
                 <div class="block">
-                    <a href="http://ewitis.cz/">&copy; Časomíra Ewitis 2011</a>
+                    <a href="/">&copy; Časomíra Ewitis 2011</a>
                     <div class="cistic"></div>                                                  
 
                 </div>
@@ -139,16 +138,20 @@ $(document).ready(function() {
 </div>
 
 
+<script type="text/javascript">
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27490663-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-16034666-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+    
 
 </body>
 </html>

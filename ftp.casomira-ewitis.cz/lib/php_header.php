@@ -44,6 +44,9 @@ echo($top_note);*/
         //else
       //  header("Location: {$_SERVER['REQUEST_URI']}");
    // }
+        
+        
+
 if ($_POST){
         if(isset($_POST['noheader']))
             ;

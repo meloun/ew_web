@@ -23,7 +23,7 @@
          <div>
             <?=common_processTexy($competition['desc_cash'])?>
         </div>       
-        <input type="submit" name="submit_step2" class="size150" value="<?=SUBMIT_STEP2?>">
+        <input type="submit" name="submit_step2" class="size150 submit" value="<?=SUBMIT_STEP2?>">
         </form>
 
     </div>

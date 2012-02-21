@@ -22,12 +22,12 @@
     $FILTER_PAID = $_GET["fp"];
 
     /* ADRESY */
-    $ADRESS_THIS = "?p={$_GET['p']}"
+    $ADRESS_THIS = "/?p={$_GET['p']}"
         .($FILTER_KATEGORY ? "&fk=$FILTER_KATEGORY" : "")
         .(($FILTER_PAID !== NULL) ? "&fp=$FILTER_PAID" : "");
-    $ADRESS_EXCEPT_FILTER_KATEGORY = "?p={$_GET['p']}&"
+    $ADRESS_EXCEPT_FILTER_KATEGORY = "/?p={$_GET['p']}&"
         .(($FILTER_PAID !== NULL) ? "fp=$FILTER_PAID&" : "");
-    $ADRESS_EXCEPT_FILTER_GROUP = "?p={$_GET['p']}&"
+    $ADRESS_EXCEPT_FILTER_GROUP = "/?p={$_GET['p']}&"
         .($FILTER_KATEGORY ? "fk=$FILTER_KATEGORY&" : "");
 
 

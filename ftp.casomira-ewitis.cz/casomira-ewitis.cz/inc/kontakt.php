@@ -15,7 +15,7 @@ $subtitle = "Kontakt";
             <div class="kontakt">
                 <h2>Kontakt</h2>
                 <p>
-                    info@ewitis.cz
+                    info@casomira-ewitis.cz
                 </p>
             </div>
 

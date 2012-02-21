@@ -23,10 +23,15 @@
                 <?foreach($competitions as $competition){?>
                         <tr>
                             <td class="id"><?=$competition['id']?></td>
-                            <td class="name"><a href="?p=zavod&cid=<?=$competition['id']?>"><?=$competition['name']?></a></td>
+                            <td class="name"><a href="/zavod/<?=Utils::friendly_url($competition['name']);?>"><?=$competition['name']?></a></td>
                             <td><?=$competition['date']?></td>
                             <td><?=$competition['place']?></td>
-                            <td><a href="?p=registrace&cid=<?=$competition['id']?>"><strong>Registrace &raquo;</strong></a></td>
+                            
+                            <? if($competition['registration_en']){ ?>
+                                <td><a href="/registrace/<?=Utils::friendly_url($competition['name']);?>"><strong>Registrace &raquo;</strong></a></td>
+                            <?}else if($competition['results']){ ?>
+                                <td><a href="/zavod/<?=Utils::friendly_url($competition['name']);?>/vysledky"><strong>Výsledky &raquo;</strong></a></td>
+                            <?}?>
                         </tr>
                 <?}?>
                     </tbody>

@@ -26,6 +26,7 @@ class Competition {
 		
 		return $competitions;
 	}
+
 	/*public static function Replace($array) {
 	    $id_esc = Db::EscInteger($array['id']);
 	    $name_esc = Db::EscString($array['name']);
@@ -119,7 +120,7 @@ class Competition {
 
         //predavam i users, uz vyfiltrovane napr. jen platici
         //casem asi predelat a predavat competition a filtr pro users
-        public static function Html_tableUsers($competition, $kategory_filtr=NULL, $paid_filtr=NULL, $show_private = 0){
+        public static function Html_tableUsers($competition, $kategory_filtr=NULL, $paid_filtr=NULL, $show_private = 0){            
             $users = User::GetParCompetitionId($competition['id'], $kategory_filtr, $paid_filtr);
             ?>
 
