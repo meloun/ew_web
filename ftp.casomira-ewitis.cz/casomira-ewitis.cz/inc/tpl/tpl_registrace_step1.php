@@ -121,7 +121,14 @@
                 <input type="text" size="40" name="user_field_3" value="<?=$_POST['user_field_3']?>">
             </p>
             <?}?>
-            
+            <div class="cistic"></div>
+            <?if($competition['user_field_4_name'] != NULL){?>
+                <p>
+                    <label><?=$competition['user_field_4_duty'] ? '<span class="povinne">*</span>' : ''?><?=$competition['user_field_4_name']?> </label>
+                    <input type="text" size="40" name="user_field_4" value="<?=$_POST['user_field_4']?>">
+                </p>
+            <?}?>
+            <div class="cistic"></div>
             <p>
                 <label><span class="povinne">*</span>1 + 1 =<br/><span>(antispam)</span></label>
                 <input type="text" name="antispam" value="" size="1" />

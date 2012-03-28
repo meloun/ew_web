@@ -16,7 +16,7 @@
                             <th>jméno</th>
                             <th>datum</th>
                             <th>místo</th>
-                            <th>R</th>
+                            <th>R / V</th>
                         </tr>
                     </thead>
                     <tbody>

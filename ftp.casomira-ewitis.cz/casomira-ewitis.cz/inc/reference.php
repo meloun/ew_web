@@ -41,7 +41,7 @@
                             <ul>                                    
                             <li>Závody poionýrů Jawa 50 a vložený závod Pitbike</li>
                             <li>5 kategorií - rozjížďky + finále</li>
-                            <li>shrnutí závodu v <a href="http://ewitis.cz/?p=zavod&cid=7&tab=5">televizním spotu a fotografiích</a></li>                                    
+                            <li>shrnutí závodu v <a href="/zavod/krapkap-tremosna-2011/galerie">televizním spotu a fotografiích</a></li>                                    
                             </ul>
                         </div>
                         <div class="cistic"></div>
@@ -69,7 +69,7 @@
                             <ul>                                    
                             <li>finálový závod Poháru Plzeňského kraje <a href="http://www.beckercup.wgz.cz" rel="external" target="_blank">Becker Cup</a> </li>
                             <li>open Mistrovství Plzeňského kraje</li>
-                            <li>Na video od MOABu se můžete podívat <a href="http://ewitis.cz/?p=zavod&cid=5&tab=5">ZDE</a></li>
+                            <li>Na video od MOABu se můžete podívat <a href="/zavod/author-mtb-stupno/galerie">ZDE</a></li>
                             <li>18 kategorií s prolínanými starty</li>                                    
                             </ul>
                         </div>

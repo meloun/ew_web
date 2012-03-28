@@ -15,6 +15,7 @@
            <input type="hidden" name="user_field_1" value="<?=$_POST['user_field_1']?>">
            <input type="hidden" name="user_field_2" value="<?=$_POST['user_field_2']?>">
            <input type="hidden" name="user_field_3" value="<?=$_POST['user_field_3']?>">
+           <input type="hidden" name="user_field_4" value="<?=$_POST['user_field_4']?>">
            <input type="hidden" name="antispam" value="<?=$_POST['antispam']?>">
 
 

@@ -155,6 +155,11 @@ class Competition {
                             <th class="user_field_3"><?=$competition['user_field_3_name']?></th>
                         <?}
                      }?>
+                     <?if(($competition['user_field_4_name'])){
+                        if(($show_private) || ($competition['user_field_4_public'])){?>
+                            <th class="user_field_4"><?=$competition['user_field_4_name']?></th>
+                        <?}
+                     }?>
 
                      
                      <?if($show_private){?>
@@ -197,6 +202,11 @@ class Competition {
                         <?if(($competition['user_field_3_name'])){
                             if(($show_private) || ($competition['user_field_3_public'])){?>
                                 <td class="user_field_3"><?=$user['user_field_3']?></td>
+                            <?}
+                        }?>
+                        <?if(($competition['user_field_4_name'])){
+                            if(($show_private) || ($competition['user_field_4_public'])){?>
+                                <td class="user_field_4"><?=$user['user_field_4']?></td>
                             <?}
                         }?>
 

@@ -130,6 +130,7 @@ class User {
             $user_field_1_esc = Db::EscString($array['user_field_1']);
             $user_field_2_esc = Db::EscString($array['user_field_2']);
             $user_field_3_esc = Db::EscString($array['user_field_3']);
+            $user_field_4_esc = Db::EscString($array['user_field_4']);
 	    
 	    //$user_exist = User::GetParName("$array[first_name]", "$array[last_name]");
 
@@ -144,9 +145,9 @@ class User {
 	    //if(($user_exist == false )||($replace_permission)){
 	    $query = "
 		    REPLACE INTO users
-		    (id, competition_id, kategory_id, first_name, last_name, email, birthday, sex, user_field_1, user_field_2, user_field_3, symbol)
+		    (id, competition_id, kategory_id, first_name, last_name, email, birthday, sex, user_field_1, user_field_2, user_field_3,user_field_4, symbol)
 		    VALUES
-		    ({$id_esc}, {$competition_id_esc}, {$kategory_id_esc}, {$first_name_esc}, {$last_name_esc}, {$email_esc}, {$birthday_esc}, {$sex_esc}, {$user_field_1_esc}, {$user_field_2_esc}, {$user_field_3_esc}, {$symbol_esc})
+		    ({$id_esc}, {$competition_id_esc}, {$kategory_id_esc}, {$first_name_esc}, {$last_name_esc}, {$email_esc}, {$birthday_esc}, {$sex_esc}, {$user_field_1_esc}, {$user_field_2_esc}, {$user_field_3_esc}, {$user_field_4_esc}, {$symbol_esc})
 	    ";
             var_dump($query);
 	    Db::Query($query, LINK);

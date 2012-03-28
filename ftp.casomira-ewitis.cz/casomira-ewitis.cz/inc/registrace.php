@@ -97,7 +97,7 @@ elseif ($_POST){
             $kategory = Kategory::Get($_POST['kategory_id']);
 	    $message = strip_tags(Ewitis::getRegRequestString($_POST, $competition, $kategory));
 	    Email::Send($_POST['email'], $competition['name']." - Registrace - {$_POST['first_name']} {$_POST['last_name']}", $message,"info@casomira-ewitis.cz", "časomíra Ewitis");
-	    Email::Send("registrace@casomira-ewitis.cz", "{$competition['name']} - Registrace - {$_POST['first_name']} {$_POST['last_name']}",$message,"bot@ewitis.cz", "časomíra Ewitis");            
+	    Email::Send("registrace@casomira-ewitis.cz", "{$competition['name']} - Registrace - {$_POST['first_name']} {$_POST['last_name']}",$message,"bot@casomira-ewitis.cz", "časomíra Ewitis");            
         }
     }
 
@@ -109,7 +109,7 @@ elseif ($_POST){
 <style type="text/css">    
 
     h2{font-size: 80%;}
-    form label{width:100px;display:block;float:left;}
+    form label{width:120px;display:block;float:left;}
     form{text-align:  left;}
     label span{font-size:85%;}
     label span.povinne{font-size:100%; color:red;}

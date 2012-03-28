@@ -65,7 +65,7 @@
 
 
 <!-- Full version of jQuery Tools + jQuery 1.3.2 -->
-<script src="http://cdn.jquerytools.org/1.1.2/full/jquery.tools.min.js"></script>
+<script src="/js/jquery.tools.min.js"></script>
 <script type="text/javascript" src="/jquery/jquery-ui-personalized-1.5.2.packed.js"></script>
 <script type="text/javascript" src="/jquery/jquery.tablesorter.min.js"></script>
 

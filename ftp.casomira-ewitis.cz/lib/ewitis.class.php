@@ -26,6 +26,10 @@ class Ewitis {
         $string .= ($competition['user_field_1_name']!= NULL) ? "<div>".strip_tags($competition['user_field_1_name']).": <strong>{$user['user_field_1']}</strong></div>" : "";        
         $string .= "\n               ";
         $string .= ($competition['user_field_2_name']!= NULL) ? "<div>".strip_tags($competition['user_field_2_name']).": <strong>{$user['user_field_2']}</strong></div>" : "";        
+        $string .= "\n               ";
+        $string .= ($competition['user_field_3_name']!= NULL) ? "<div>".strip_tags($competition['user_field_3_name']).": <strong>{$user['user_field_3']}</strong></div>" : "";
+        $string .= "\n               ";
+        $string .= ($competition['user_field_3_name']!= NULL) ? "<div>".strip_tags($competition['user_field_3_name']).": <strong>{$user['user_field_3']}</strong></div>" : "";
         return $string;
     }
     public static function getPayString($user, $competition){
