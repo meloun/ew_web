@@ -9,6 +9,10 @@ class Ewitis {
 	}
 	return "-";
     }
+    public static function getContact($competition){
+        $string = ($competition['contact']!= NULL) ? "V případě dotazů se obraťte na pořadatele závodu - {$competition['contact']}." : "";
+        return $string;
+    }
     public static function getUserString($user, $competition){
        //$competition = Competition::Get($user['competition_id']);
        $kategory = Kategory::Get($user['kategory_id']);
@@ -29,7 +33,7 @@ class Ewitis {
         $string .= "\n               ";
         $string .= ($competition['user_field_3_name']!= NULL) ? "<div>".strip_tags($competition['user_field_3_name']).": <strong>{$user['user_field_3']}</strong></div>" : "";
         $string .= "\n               ";
-        $string .= ($competition['user_field_3_name']!= NULL) ? "<div>".strip_tags($competition['user_field_3_name']).": <strong>{$user['user_field_3']}</strong></div>" : "";
+        $string .= ($competition['user_field_4_name']!= NULL) ? "<div>".strip_tags($competition['user_field_4_name']).": <strong>{$user['user_field_4']}</strong></div>" : "";
         return $string;
     }
     public static function getPayString($user, $competition){
@@ -66,8 +70,8 @@ class Ewitis {
             Registrace na závod {$competition['name']}            
 
             ".strip_tags(Ewitis::getUserString($user, $competition))."
-
-            ".strip_tags(Ewitis::getPayString($user, $competition))."            
+            ".strip_tags(Ewitis::getPayString($user, $competition))."
+            ".strip_tags(Ewitis::getContact($competition))."
 
 	    http://www.casomira-ewitis.cz
 	    info@casomira-ewitis.cz
@@ -78,7 +82,8 @@ class Ewitis {
 	return "
 	    Organizátor závodu {$competition['name']} právě potvrdil vaši registraci.
 
-            ".strip_tags(Ewitis::getUserString($user, $competition))."            
+            ".strip_tags(Ewitis::getUserString($user, $competition))."                
+            ".strip_tags(Ewitis::getContact($competition))."
 
 	    http://www.casomira-ewitis.cz
 	    info@casomira-ewitis.cz
@@ -91,7 +96,8 @@ class Ewitis {
 
 	    !! VAŠE REGISTRACE NENÍ JIŽ PLATNÁ !!
 
-            ".strip_tags(Ewitis::getUserString($user, $competition))."            
+            ".strip_tags(Ewitis::getUserString($user, $competition))."
+            ".strip_tags(Ewitis::getContact($competition))."
 
 	    http://www.casomira-ewitis.cz
 	    info@casomira-ewitis.cz
@@ -105,6 +111,7 @@ class Ewitis {
 	    !! VAŠE REGISTRACE NENÍ PLATNÁ !!
 
             ".strip_tags(Ewitis::getUserString($user, $competition))."
+            ".strip_tags(Ewitis::getContact($competition))."
                 
 
 	    http://www.casomira-ewitis.cz

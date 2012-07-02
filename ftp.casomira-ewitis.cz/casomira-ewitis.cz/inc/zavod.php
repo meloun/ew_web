@@ -34,8 +34,8 @@
       case "zavodnici":    
         $nr_tab = 3;
         break;
-      case "vysledky":    
-        $nr_tab = 4;
+      case "vysledky":
+        ($categories)?$nr_tab = 4:$nr_tab = 1;
         break;
       case "galerie":    
         $nr_tab = 5;

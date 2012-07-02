@@ -12,9 +12,9 @@
                 <table id="tablesorter-demo" class="tablesorter" cellpadding="0" cellspacing="1">
                     <thead>
                         <tr>
-                            <th class="id">nr</th>
-                            <th>jméno</th>
+                            <!--<th class="id">nr</th>-->
                             <th>datum</th>
+                            <th>jméno</th>                            
                             <th>místo</th>
                             <th>R / V</th>
                         </tr>
@@ -22,9 +22,9 @@
                     <tbody>
                 <?foreach($competitions as $competition){?>
                         <tr>
-                            <td class="id"><?=$competition['id']?></td>
-                            <td class="name"><a href="/zavod/<?=Utils::friendly_url($competition['name']);?>"><?=$competition['name']?></a></td>
+                            <!--<td class="id"><?=$competition['id']?></td>-->
                             <td><?=$competition['date']?></td>
+                            <td class="name"><a href="/zavod/<?=Utils::friendly_url($competition['name']);?>"><?=$competition['name']?></a></td>                            
                             <td><?=$competition['place']?></td>
                             
                             <? if($competition['registration_en']){ ?>

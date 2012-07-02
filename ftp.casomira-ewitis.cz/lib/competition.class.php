@@ -4,7 +4,7 @@ class Competition {
 		$res = Db::Query("
 			SELECT *
 			FROM competitions
-                        ORDER BY id DESC
+                        ORDER BY date DESC
 
 		", LINK);
 		
@@ -258,13 +258,14 @@ class Competition {
                          
               
               //csv string
-              $aux_string = "id;nr;name;first_name;category;birthday;sex;email;symbol;paid;description;user field_1; user field_2; user field_3; user field_4;";
+              //$aux_string = "id;nr;name;first_name;category;birthday;sex;email;symbol;paid;description;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']);
+              $aux_string = "Id;Číslo;Příjmení;Jméno;Kategorie;Ročník;Pohlaví;Email;Symbol;Placeno;Poznámka;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']);
               $aux_string .=  "\n";
               foreach($users as $user){
                   $aux_kategory = Kategory::Get($user['kategory_id']);
                   $aux_sex = Ewitis::getSexString($user['sex']);
                   
-                  $aux_string .= "{$user['id']};0;{$user['last_name']};{$user['first_name']};{$aux_kategory['name']};{$user['birthday']};{$user['sex']};{$user['email']};{$user['symbol']};{$user['paid']};{$user['description']};{$user['user_field_1']};{$user['user_field_2']};";
+                  $aux_string .= "{$user['id']};0;{$user['last_name']};{$user['first_name']};{$aux_kategory['name']};{$user['birthday']};{$user['sex']};{$user['email']};{$user['symbol']};{$user['paid']};{$user['description']};{$user['user_field_1']};{$user['user_field_2']};{$user['user_field_3']};{$user['user_field_4']};";
                   if($coding !== NULL)
                     $aux_string .= "{$user['birthday']};{$aux_sex};{$user['symbol']};{$user['paid']};";
                   $aux_string .=  "\n";
