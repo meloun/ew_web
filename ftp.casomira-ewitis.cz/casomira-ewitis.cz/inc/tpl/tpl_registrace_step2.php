@@ -9,7 +9,7 @@
            <input type="hidden" name="first_name" value="<?=$_POST['first_name']?>">
            <input type="hidden" name="last_name" value="<?=$_POST['last_name']?>">
            <input type="hidden" name="email" value="<?=$_POST['email']?>">
-           <input type="hidden" name="birthday" value="<?=$_POST['birthday']?>">
+           <input type="hidden" name="year" value="<?=$_POST['year']?>">
            <input type="hidden" name="sex" value="<?=$_POST['sex']?>">
            <input type="hidden" name="sex" value="<?=$_POST['sex']?>">
            <input type="hidden" name="user_field_1" value="<?=$_POST['user_field_1']?>">
@@ -19,7 +19,7 @@
            <input type="hidden" name="antispam" value="<?=$_POST['antispam']?>">
 
 
-           <?Competition::Html_tableKategories($competition['id'], $_POST['sex'], $_POST['birthday']);?>
+           <?Competition::Html_tableKategories($competition['id'], $_POST['sex'], $_POST['year']);?>
            
          <div>
             <?=common_processTexy($competition['desc_cash'])?>

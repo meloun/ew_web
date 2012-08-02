@@ -26,7 +26,7 @@
             
             <p>
                 <label><span class="povinne">*</span>Rok narození</label>
-                <select name="birthday">
+                <select name="year">
                     <option value="1940">1940</option>
                     <option value="1941">1941</option>
                     <option value="1942">1942</option>

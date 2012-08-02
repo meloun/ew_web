@@ -78,7 +78,7 @@ class Competition {
 	}
 
         //vlozi tabulku s kategoriemi, pripadne prida jeste radiobuttony a zpristupni podle pohlavi a veku
-        public static function Html_tableKategories($competition_id, $sex = NULL, $birthday = NULL){
+        public static function Html_tableKategories($competition_id, $sex = NULL, $year = NULL){
             $competition = Competition::Get($competition_id);
             $kategories = Kategory::GetParCompetitionId($competition_id);
             ?>
@@ -86,7 +86,7 @@ class Competition {
             <table id="tablesorter-demo" class="tablesorter" cellpadding="0" cellspacing="1">
             <thead>
                 <tr>
-                    <?=($birthday != NULL) ? "<th>-</th>" : ""?>
+                    <?=($year != NULL) ? "<th>-</th>" : ""?>
                     <th>Jméno</th>                                    
                     <th>Popis</th>                    
                     <?=($competition['nr_cash']== 1) ?
@@ -99,10 +99,10 @@ class Competition {
 
             <tbody>
             <?foreach($kategories as $kategory){
-                    $IsInKategory = Kategory::IsInKategory($_POST['sex'], $_POST['birthday'], $kategory);
+                    $IsInKategory = Kategory::IsInKategory($_POST['sex'], $_POST['year'], $kategory);
                     $class = ($class=='even') ? 'odd' : 'even';?>
                     <tr class="<?=$class?>">
-                        <?if($birthday != NULL){?>
+                        <?if($year != NULL){?>
                             <td><input type="radio" name="kategory_id" value="<?=$kategory['id']?>" <?=($IsInKategory) ? "" : "disabled"?> ></td>
                         <?}?>
                         <td class="name"><?=$kategory['name']?></td>
@@ -163,7 +163,7 @@ class Competition {
 
                      
                      <?if($show_private){?>
-                        <th class="birthday">Rok</th>
+                        <th class="year">Rok</th>
                         <th class="sex">Sex</th>
                         <th class="email">Email</th>
                         <th class="symbol">Symbol</th>
@@ -214,7 +214,7 @@ class Competition {
 
                         
                         <?if($show_private){?>                        
-                        <td class="birthday"><?=$user['birthday']?></td>
+                        <td class="year"><?=$user['year']?></td>
                         <td class="sex"><?=Ewitis::getSexString($user['sex']);?></td>
                         <td><?=$user['email']?></td>
                         <td class="symbol"><?=$user['symbol']?></td>
@@ -249,30 +249,60 @@ class Competition {
          
          
 /*
-| id | nr | name | first name | category | birthday | sex | email | symbol | paid | description | user field_1|..| user field_4
+| id | nr | name | first name | category | year | sex | email | symbol | paid | description | user field_1|..| user field_4
 */
 
-         public static function Export_CSV($competition, $kategory_filtr=NULL, $paid_filtr=NULL, $coding=NULL){
+         public static function Export_CSV_users($competition, $kategory_filtr=NULL, $paid_filtr=NULL, $coding=NULL){
              
              $users = User::GetParCompetitionId($competition['id'], $kategory_filtr, $paid_filtr);
                          
               
               //csv string
-              //$aux_string = "id;nr;name;first_name;category;birthday;sex;email;symbol;paid;description;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']);
-              $aux_string = "Id;Číslo;Příjmení;Jméno;Kategorie;Ročník;Pohlaví;Email;Symbol;Placeno;Poznámka;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']);
+              $aux_string = "id;nr;name;first_name;category;club;year;sex;email;symbol;paid;description;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']).";";
+              //$aux_string = "Id;Číslo;Příjmení;Jméno;Kategorie;Klub;Ročník;Pohlaví;Email;Symbol;Placeno;Poznámka;".strip_tags($competition['user_field_1_name']).";".strip_tags($competition['user_field_2_name']).";".strip_tags($competition['user_field_3_name']).";".strip_tags($competition['user_field_4_name']).";";
               $aux_string .=  "\n";
               foreach($users as $user){
                   $aux_kategory = Kategory::Get($user['kategory_id']);
                   $aux_sex = Ewitis::getSexString($user['sex']);
                   
-                  $aux_string .= "{$user['id']};0;{$user['last_name']};{$user['first_name']};{$aux_kategory['name']};{$user['birthday']};{$user['sex']};{$user['email']};{$user['symbol']};{$user['paid']};{$user['description']};{$user['user_field_1']};{$user['user_field_2']};{$user['user_field_3']};{$user['user_field_4']};";
+                  $aux_string .= "{$user['id']};0;{$user['last_name']};{$user['first_name']};{$aux_kategory['name']};{$user['club']};{$user['year']};{$user['sex']};{$user['email']};{$user['symbol']};{$user['paid']};{$user['description']};{$user['user_field_1']};{$user['user_field_2']};{$user['user_field_3']};{$user['user_field_4']};";
                   if($coding !== NULL)
-                    $aux_string .= "{$user['birthday']};{$aux_sex};{$user['symbol']};{$user['paid']};";
+                    $aux_string .= "{$user['year']};{$aux_sex};{$user['symbol']};{$user['paid']};";
                   $aux_string .=  "\n";
               }          
               
               //save to file
-              $myPath = WEB_PATH."/exports/".Utils::Utf2ascii($competition['name']).".csv";
+              $myPath = WEB_PATH."/exports/".Utils::Utf2ascii("users_".$competition['name']).".csv";
+              $file = fopen($myPath,'w+');
+
+              if($coding !== NULL)
+                $aux_string = iconv('UTF-8',$coding,$aux_string);
+              
+              fwrite($file, $aux_string);
+              fclose($file);              
+         }
+/*
+| id | nr | name | first name | category | year | sex | email | symbol | paid | description | user field_1|..| user field_4
+*/
+
+         public static function Export_CSV_categories($competition, $coding=NULL){
+             	
+             //get competition's categories
+             $categories = Kategory::GetParCompetitionId($competition['id']);
+                                                    
+              //csv string                            
+              $aux_string = "id;name;description;start_nr;g1;g2;g3;g4;g5;g6;g7;g8;g9;g10;";
+              $aux_string .=  "\n";
+              $aux_category_id = 1;
+              foreach($categories as $category){                  
+                                   
+                  $aux_string .= "$aux_category_id;{$category['name']};{$category['description']};1;0;0;0;0;0;0;0;0;0;0;";                  
+                  $aux_string .=  "\n";
+                  $aux_category_id++;                                    
+              }          
+              
+              //save to file
+              $myPath = WEB_PATH."/exports/".Utils::Utf2ascii("categories_".$competition['name']).".csv";
               $file = fopen($myPath,'w+');
 
               if($coding !== NULL)

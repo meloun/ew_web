@@ -69,11 +69,12 @@
     }
 
     if($_GET['csv'] == 1){
-        Competition::Export_CSV($competition, $_GET["fk"], $_GET["fp"], 'CP1250');
+        Competition::Export_CSV_users($competition, $_GET["fk"], $_GET["fp"], 'CP1250');
         echo("<h3>CSV vyexportováno</h3>");
     }
     else if($_GET['csv'] == 2){
-        Competition::Export_CSV($competition, $_GET["fk"], $_GET["fp"]);
+        Competition::Export_CSV_users($competition, $_GET["fk"], $_GET["fp"]);
+        Competition::Export_CSV_categories($competition, $_GET["fk"], $_GET["fp"]);		
         echo("<h3>CSV vyexportováno</h3>");
     }
     
@@ -97,7 +98,8 @@
 <div id="admin_users">
     <h2><?=$competition['name']?></h2>
     <h3>Přihlášen uživatel <?=$admin['name']?></h3>
-    <a href="/exports/<?=Utils::Utf2ascii($competition['name']).".csv"?>"><img src="/gfx/excel.png" title="stáhnout CSV"/></a>
+    <a href="/exports/<?=Utils::Utf2ascii("users_".$competition['name']).".csv"?>"><img src="/gfx/excel_users.png" title="stáhnout uživatele [csv]"/></a>
+    <a href="/exports/<?=Utils::Utf2ascii("categories_".$competition['name']).".csv"?>"><img src="/gfx/excel_categories.png" title="stáhnout kategorie [csv]"/></a>
     vytvoř export : 
     <a href="<?=$ADRESS_THIS?>&csv=1">Excel(CP1250)</a> -
     <a href="<?=$ADRESS_THIS?>&csv=2">Aplikace(UTF-8)</a>  

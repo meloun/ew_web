@@ -45,24 +45,24 @@ class Kategory {
 	    $name_esc = Db::EscString($array['name']);
 	    $description_esc = Db::EscString($array['description']);
 	    $sex_esc = Db::EscInteger($array['sex']);
-	    $birthday_min_esc = Db::EscString($array['birthday_min']);
-	    $birthday_max_esc = Db::EscString($array['birthday_max']);
+	    $year_min_esc = Db::EscString($array['year_min']);
+	    $year_max_esc = Db::EscString($array['year_max']);
 
 	    $query = "
 		    REPLACE INTO kategories
-		    (id, competition_id, name, description, sex, birthday_min, birthday_max)
+		    (id, competition_id, name, description, sex, year_min, year_max)
 		    VALUES
-		    ({$id_esc}, {$competition_id_esc}, {$name_esc}, {$description_esc}, {$sex_esc}, {$birthday_min_esc}, {$birthday_max_esc})
+		    ({$id_esc}, {$competition_id_esc}, {$name_esc}, {$description_esc}, {$sex_esc}, {$year_min_esc}, {$year_max_esc})
 	    ";
 
 	    Db::Query($query, LINK);
 	}
-	public static function IsInKategory($sex, $birthday, $kategory){
+	public static function IsInKategory($sex, $year, $kategory){
 	    if(($sex != $kategory['sex']) && ($kategory['sex'] != 0))//0-nezalezi na pohlavi
 		return false;	
-	    if($birthday < $kategory['birthday_min'])
+	    if($year < $kategory['year_min'])
 		return false;
-	    if($birthday > $kategory['birthday_max'])
+	    if($year > $kategory['year_max'])
 		return false;
 	    return true;
 	}
