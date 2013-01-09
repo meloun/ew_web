@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HOST} www.ewitis\.cz
+RewriteRule (.*) http://www.casomira-ewitis.cz/$1 [R=301,QSA,L]
+
+RewriteCond %{HTTP_HOST} ^casomira-ewitis.cz$
+RewriteRule (.*) http://www.casomira-ewitis.cz/$1 [R=301,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/?$ ?p=$1

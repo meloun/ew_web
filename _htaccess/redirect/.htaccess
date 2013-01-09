@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule (.*) http://www.casomira-ewitis.cz/$1 [R,QSA,L]
