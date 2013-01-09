@@ -66,6 +66,8 @@ a[rel ~='external'] {
  * HEADER
  */
 /*logo*/
+#header{text-align:center;}
+#header img{margin:auto;}
 #header h1{
     font: 4.6em normal Georgia, 'Times New Roman', Times, serif;
     color: #000;
@@ -131,7 +133,8 @@ ul#topnav {
 .size130{font-size: 130%;}
 .size140{font-size: 140%;}
 .size150{font-size: 140%;}
-.topmargin20{margin-top: 50px;}
+.topmargin50{margin-top: 50px;}
+
 .cistic{clear:both;}
 .center{text-align:center;}
 blockquote {
@@ -210,6 +213,7 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
                 padding: 5px 0;
                 margin: 5px 0;
         }
+    .toggle_container h1,
     .toggle_container h2,
     .toggle_container h3 {
             font: 2em normal Georgia, "Times New Roman", Times, serif;
@@ -217,6 +221,7 @@ a.tooltip:hover{text-decoration: none;border-bottom:2px dashed #d6d6d6;}
             padding: 0 0 4px 0;
             border-bottom: 1px dashed #ccc;
     }
+    .toggle_container h2{font-size: 1.8em}
     .toggle_container h3{font-size: 1.4em}
     .toggle_container img {
             float: left;

@@ -25,6 +25,7 @@ class Ewitis {
                 <div>Email: <strong>{$user['email']}</strong></div>
                 <div>Pohlaví: <strong>{$sex_string}</strong></div>
                 <div>Rok narození: <strong>{$user['year']}</strong></div>
+                <div>Klub: <strong>{$user['club']}</strong></div>
                 ";        
         
         $string .= ($competition['user_field_1_name']!= NULL) ? "<div>".strip_tags($competition['user_field_1_name']).": <strong>{$user['user_field_1']}</strong></div>" : "";        

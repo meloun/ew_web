@@ -16,11 +16,11 @@
                             <img src="/img/icons/coins-icon.png" />
                         </div>
                         <div class="left_box">
-                            <h3>Ceník měření</h3>
+                            <h2>Ceník měření</h2>
                              <p>Nabízíme široké spektrum měření závodů a tréninků s různou technikou. Mnohdy závody doplňujeme doprovodnými službami jako je registrace či ozvučení závodu.
                                 Shrnout tak náš ceník do nějáké tabulky není možné. </p>
                              
-                             <p>Napište nám na náš email <b>info&#64;ewitis.cz</b> a my Vám obratem pošleme cenovou nabídku podle vašich požadavků.</p>
+                             <p>Napište nám na náš email <b>info&#64;casomira-ewitis.cz</b> a my Vám obratem pošleme cenovou nabídku podle vašich požadavků.</p>
                         </div>
                         <div class="cistic"></div>
                     </div>

@@ -24,6 +24,11 @@
                 <input type="radio" name="sex" value="2" <?=( $_POST['sex']=='2') ? 'checked' : ''?>>žena
             </p>
             
+            <p>                
+                <label><?=$competition['club_duty'] ? '<span class="povinne">*</span>' : ''?>Klub</label>
+                <input type="text" size="30" name="club" value="<?=$_POST['club']?>">
+            </p>
+            
             <p>
                 <label><span class="povinne">*</span>Rok narození</label>
                 <select name="year">

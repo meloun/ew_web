@@ -47,6 +47,10 @@ elseif ($_POST){
     elseif($_POST['sex']=='')
 	$report = "CHYBA: Nevybráno pohlaví!";
 
+    //povinny a nezadany klub?
+    elseif($competition['club_duty'] && ($_POST['club'] == ''))
+        $report = "CHYBA: Klub !";
+    
     //povinne a nezadane uzivatelske pole?
     elseif($competition['user_field_1_duty'] && ($_POST['user_field_1'] == ''))
         $report = "CHYBA: ". strip_tags($competition['user_field_1_name'])." !";

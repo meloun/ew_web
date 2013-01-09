@@ -12,6 +12,7 @@
            <input type="hidden" name="year" value="<?=$_POST['year']?>">
            <input type="hidden" name="sex" value="<?=$_POST['sex']?>">
            <input type="hidden" name="sex" value="<?=$_POST['sex']?>">
+           <input type="hidden" name="club" value="<?=$_POST['club']?>">
            <input type="hidden" name="user_field_1" value="<?=$_POST['user_field_1']?>">
            <input type="hidden" name="user_field_2" value="<?=$_POST['user_field_2']?>">
            <input type="hidden" name="user_field_3" value="<?=$_POST['user_field_3']?>">
