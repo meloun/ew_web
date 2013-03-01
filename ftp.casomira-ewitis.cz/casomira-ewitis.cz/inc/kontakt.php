@@ -15,11 +15,18 @@ $subtitle = "Kontakt";
 <div id="kontakty">
     <div class="toggle_container w600">
         <div class="block">
-
+            
             <div class="kontakt">
                 <h2>Email</h2>
                 <p>
                     info@casomira-ewitis.cz
+                </p>                
+            </div>
+            
+            <div class="kontakt">
+                <h2>Telefon</h2>
+                <p>
+                    +420 702 421 142 (Jan Babčaník)
                 </p>                
             </div>
 

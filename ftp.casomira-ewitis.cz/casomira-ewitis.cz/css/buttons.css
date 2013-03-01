@@ -1,5 +1,5 @@
 /*---------- left aligned button ----------*/
-.btn { display: block; position: relative; background: #aaa; padding: 5px; margin: 0px; float: left; color: #fff; text-decoration: none; cursor: pointer; }
+.btn { display: block; position: relative; background: #a40000; padding: 5px; margin: 0px; float: left; color: #fff !important; text-decoration: none; cursor: pointer; }
 .btn * { font-style: normal; background-image: url('img/btn2.png'); background-repeat: no-repeat; display: block; position: relative; }
 .btn i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
 .btn span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }
@@ -13,7 +13,7 @@
 .btn.green { background: #9d4; }
 .btn.lime { background: #bbce00; }
 .btn.pink { background: #e1a; }
-.btn:hover { background-color: #a00; color: #fff; }
+.btn:hover { background-color: red; color: #fff; }
 .btn:active { background-color: #444; color: #fff; }
 .btn[class] {  background-image: url('img/btn.png'); background-position: bottom; }
 
@@ -77,7 +77,7 @@
 * html .btnC2:hover { border-color: #a00; }
 
 /*---------- right aligned button ----------*/
-.btnR { display: block; position: relative; background: #aaa; padding: 5px; float: right; color: #fff; text-decoration: none; cursor: pointer; }
+.btnR { display: block; position: relative; background: #a40000; padding: 5px; float: right; color: #fff !important; text-decoration: none; cursor: pointer; }
 .btnR * { font-style: normal; background-image: url('img/btn2.png'); background-repeat: no-repeat; display: block; position: relative; }
 .btnR i { background-position: top left; position: absolute; margin-bottom: -5px;  top: 0; left: 0; width: 5px; height: 5px; }
 .btnR span { background-position: bottom left; left: -5px; padding: 0 0 5px 10px; margin-bottom: -5px; }
@@ -91,7 +91,7 @@
 .btnR.green { background: #9d4; }
 .btnR.lime { background: #bbce00; }
 .btnR.pink { background: #e1a; }
-.btnR:hover { background-color: #a00; color: #fff; }
+.btnR:hover { background-color: red; color: #fff; }
 .btnR:active { background-color: #444; color: #fff; }
 .btnR[class] {  background-image: url('img/btn.png'); background-position: bottom; }
 

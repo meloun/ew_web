@@ -51,6 +51,9 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 	-khtml-border-radius-bottomleft: 5px;
 	-webkit-border-bottom-left-radius: 5px;
 }
+.notabs {	
+	border-top: 1px solid #999;	
+}
 .tab_content {
 	padding: 20px;
 	font-size: 1.0em;
