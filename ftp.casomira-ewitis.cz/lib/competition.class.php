@@ -12,6 +12,19 @@ class Competition {
 		
 		return $competitions;
 	}
+       public static function GetParYear($year) {
+		$res = Db::Query("
+			SELECT *
+			FROM competitions
+                        WHERE date<'{$year}-12-31'
+                            AND date>'{$year}-01-01'
+                        ORDER BY date DESC
+		", LINK);
+		
+		$competitions = Db::FetchTable($res);
+		
+		return $competitions;
+	}
 	
 	public static function Get($id) {
 		$id_esc = Db::EscInteger($id);

@@ -92,12 +92,14 @@ a[rel ~='external'] {
         }       
 /*menu*/    
 ul#topnav {
-	margin: 10px auto 20px; 
+	margin: 10px auto 20px;         
 	padding: 0; 
+        padding-left: 28px; /* pridano */
 	list-style: none;	
 	font: 12px normal Verdana, Arial, Helvetica, sans-serif;  
 	clear: both;	
 	width: 625px;        
+        border:solid white 1px;
 }
     ul#topnav li{
             margin: 0;
@@ -107,7 +109,7 @@ ul#topnav {
             height:40px;            
     }
     ul#topnav a, ul#topnav span {
-            padding: 10px 20px;
+            padding: 10px 37px;
             float: left;
             text-decoration: none;            
             text-transform: uppercase;

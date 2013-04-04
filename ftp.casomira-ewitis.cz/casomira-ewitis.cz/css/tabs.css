@@ -54,20 +54,28 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 .notabs {	
 	border-top: 1px solid #999;	
 }
-.tab_content {
+.tab_content{
 	padding: 20px;
 	font-size: 1.0em;
 }
-.tab_content h2 {
+.notab_content{
+	padding: 10px;
+	font-size: 1.0em;
+}
+
+.tab_content h2,
+.notab_content h2{
 	font-weight: normal;
 	padding-bottom: 10px;
 	border-bottom: 1px dashed #ddd;
 	font-size: 1.8em;
 }
-.tab_content h3 a{
+.tab_content h3 a,
+.notab_content h3 a{
 	
 }
-.tab_content img {
+.tab_content img,
+.notab_content img {
 	float: left;
 	margin: 0 20px 20px 0;
 	border: 1px solid #ddd;

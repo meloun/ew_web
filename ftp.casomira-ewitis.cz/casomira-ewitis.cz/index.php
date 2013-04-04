@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 <!-- jCAROUSEL -->
     <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="/jcarousel/jquery.mousewheel-3.0.6.pack.js"></script>
+    
     <!--  jCarousel library -->
     <script type="text/javascript" src="/jcarousel/jquery.jcarousel.min.js"></script>
     <!--   jCarousel skin stylesheet -->
@@ -147,7 +147,7 @@ $(document).ready(function() {
             <ul id="topnav" class="v2">            
                 <li <?=($_GET['p']=='casomira') ? "id='current'": '';?>><a href="/casomira">Časomíra</a></li>
                 <li <?=(($_GET['p']=='zavody')|(($_GET['p']=='registrace'))) ? "id='current'": '';?>><a href="/zavody">Závody</a></li>
-                <li <?=($_GET['p']=='reference') ? "id='current'": '';?>><a href="/reference">Reference</a></li>
+                <!-- <li <?=($_GET['p']=='reference') ? "id='current'": '';?>><a href="/reference">Reference</a></li> -->
                 <li <?=($_GET['p']=='cenik') ? "id='current'": '';?>><a href="/cenik">Ceník</a></li>
                 <li <?=($_GET['p']=='kontakt') ? "id='current'": '';?>><a href="/kontakt">Kontakt</a></li>
             </ul>

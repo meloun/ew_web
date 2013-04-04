@@ -17,6 +17,15 @@ $subtitle = "Kontakt";
         <div class="block">
             
             <div class="kontakt">
+                <h2>Sídlo</h2>
+                <p>
+                    Sídlíme v Tlučné nedaleko Plzně
+                </p>
+                <p>
+                    <iframe width="550" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Tlu%C4%8Dn%C3%A1,+Czech+Republic&amp;aq=0&amp;oq=Tlu%C4%8Dn%C3%A1&amp;sll=37.0625,-95.677068&amp;sspn=58.598104,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=Tlu%C4%8Dn%C3%A1,+Czech+Republic&amp;ll=49.924262,13.935353&amp;spn=3.013406,8.453979&amp;t=m&amp;z=8&amp;output=embed&amp;iwloc=near"></iframe>                    
+                </p>                
+            </div>            
+            <div class="kontakt">
                 <h2>Email</h2>
                 <p>
                     info@casomira-ewitis.cz

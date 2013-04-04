@@ -1,4 +1,6 @@
 
+<li><b>kde: </b>ddd <small><a rel="single_2" class="fancybox-media" href="http://maps.google.com/maps?q=Ostrov,+Czech+Republic&t=h&z=17">Search results</a></small></li>
+
 <script type="text/javascript">      
 jQuery(document).ready(function() {  
     
@@ -61,6 +63,14 @@ jQuery(document).ready(function() {
 
     
 <div id="wrap">
+    
+    						Google maps
+						<ul>
+							<li><a class="fancybox-media" href="http://maps.google.com/maps?q=Eiffel+Tower,+Avenue+Gustave+Eiffel,+Paris,+France&t=h&z=17">Search results</a></li>
+							<li><a class="fancybox-media" href="http://maps.google.com/?ll=48.85796,2.295231&spn=0.003833,0.010568&t=h&z=17">Direct link</a></li>
+							<li><a class="fancybox-media" href="http://maps.google.com/?ll=48.859463,2.292626&spn=0.000965,0.002642&t=m&z=19&layer=c&cbll=48.859524,2.292532&panoid=YJ0lq28OOy3VT2IqIuVY0g&cbp=12,151.58,,0,-15.56">Street view</a></li>
+						</ul>
+					
   <h1>jCarousel</h1>
   <h2>Riding carousels with jQuery</h2> 
   
